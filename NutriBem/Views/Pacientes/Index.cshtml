@@ -1,31 +1,22 @@
 ﻿@model IEnumerable<NutriBem.Models.Paciente>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista de pacientes";
 }
 
-<h1>Index</h1>
+<h1>Lista de pacientes</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Criar novo paciente</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Altura)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Peso)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pagante)
+                @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CpfNutricionista)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Email)
@@ -38,27 +29,25 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Telefone)
+            <th>
+                @Html.DisplayNameFor(model => model.Altura)
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Peso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pagante)
+            </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Altura)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Peso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pagante)
+                @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CpfNutricionista)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
@@ -69,8 +58,17 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Senha)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefone)
+                </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Telefone)
+                @Html.DisplayFor(modelItem => item.Altura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Peso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pagante)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Cpf">Edit</a> |

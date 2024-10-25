@@ -28,5 +28,7 @@ namespace NutriBem.Models
         
         public string Observacao {  get; set; }
 
+        public ICollection<Refeicao> Refeicoes { get; set; }
+
     }
 }
