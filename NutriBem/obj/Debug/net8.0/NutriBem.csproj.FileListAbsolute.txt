@@ -2830,14 +2830,12 @@ C:\Users\Ka Far\source\repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t
 C:\Users\Ka Far\source\repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\obj\Debug\net8.0\NutriBem.pdb
 C:\Users\Ka Far\source\repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\obj\Debug\net8.0\NutriBem.genruntimeconfig.cache
 C:\Users\Ka Far\source\repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\obj\Debug\net8.0\ref\NutriBem.dll
-<<<<<<< HEAD
 C:\Users\Ana\Source\Repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\bin\Debug\net8.0\Antlr3.Runtime.dll
 C:\Users\Ana\Source\Repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\bin\Debug\net8.0\FluentNHibernate.dll
 C:\Users\Ana\Source\Repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\bin\Debug\net8.0\Iesi.Collections.dll
 C:\Users\Ana\Source\Repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\bin\Debug\net8.0\NHibernate.dll
 C:\Users\Ana\Source\Repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\bin\Debug\net8.0\Remotion.Linq.dll
 C:\Users\Ana\Source\Repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\bin\Debug\net8.0\Remotion.Linq.EagerFetching.dll
-=======
 C:\Users\guilh\Desktop\Nutribem\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\guilh\Desktop\Nutribem\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\bin\Debug\net8.0\appsettings.json
 C:\Users\guilh\Desktop\Nutribem\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\bin\Debug\net8.0\NutriBem.staticwebassets.runtime.json
@@ -3407,4 +3405,3 @@ C:\Users\guilh\Desktop\Nutribem\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\
 C:\Users\guilh\Desktop\Nutribem\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\obj\Debug\net8.0\NutriBem.pdb
 C:\Users\guilh\Desktop\Nutribem\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\obj\Debug\net8.0\NutriBem.genruntimeconfig.cache
 C:\Users\guilh\Desktop\Nutribem\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\obj\Debug\net8.0\ref\NutriBem.dll
->>>>>>> fadff221b7f3a3771bceb193f786c128d13edbfb
