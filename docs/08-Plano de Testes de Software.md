@@ -15,11 +15,11 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 <table>
     <tr>
         <th><strong>Caso de Teste</strong></th>
-        <th><strong>CT-01 – Cadastrar nutricionista</strong></th>
+        <th><strong>CT-01 –  CRUD Nutricionista</strong></th>
     </tr>
     <tr>
         <td><strong>Requisito Associado</strong></td>
-        <td>RF-001 - Cadastrar nutricionista como usuário, através da criação de um perfil com informações pessoais gerais ligadas a sua formação.</td>
+        <td>RF-001 - Cadastrar nutricionista como usuário, vizualizar, editar e excluir os dados.</td>
     </tr>
     <tr>
         <td><strong>Objetivo do Teste</strong></td>
@@ -35,7 +35,14 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
             - Clicar em "Cadastre-se". <br>
             - Selecionar a opção "Nutricionista". <br>
             - Preencher informações de cadastro. <br>
-            - Clicar em "Confirmar".
+            - Clicar em "Confirmar". <br>
+            - Clicar na ferramenta de edição do Nutricionista. <br>
+            - Alterar dados. <br>
+            - Clicar em "Confirmar". <br>
+            - Clicar na ferramenta de vizualização do Nutricionista. <br>
+            - Clicar no botão voltar.
+            - Clicar na ferramenta de exclusão do perfil do Nutricionista. <br>
+            - Clicar em "Confirmar". <br>
         </td>
     </tr>
     <tr>

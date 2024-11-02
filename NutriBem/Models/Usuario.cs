@@ -15,6 +15,7 @@ namespace NutriBem.Models
         public required string Email { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar a data de nascimento")]
+        [Display(Name = "Data de Nascimento")]
         public required DateOnly DataNascimento { get; set; }
 
         public string Senha { get; set; }
