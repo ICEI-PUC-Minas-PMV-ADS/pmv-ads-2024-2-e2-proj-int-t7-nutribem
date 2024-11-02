@@ -1,0 +1,27 @@
+﻿@model NutriBem.Models.Refeicao
+
+<div>
+    <h2>Nova Refeição</h2>
+    <form id="createRefeicaoForm" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Tipo" class="control-label"></label>
+            <input asp-for="Tipo" class="form-control" />
+            <span asp-validation-for="Tipo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Hora" class="control-label"></label>
+            <input asp-for="Hora" class="form-control" />
+            <span asp-validation-for="Hora" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ReceitaId" class="control-label"></label>
+            <select asp-for="ReceitaId" class="form-control" asp-items="ViewBag.Receitas"></select>
+            <span asp-validation-for="ReceitaId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Criar" class="btn btn-primary" />
+        </div>
+    </form>
+
+</div>

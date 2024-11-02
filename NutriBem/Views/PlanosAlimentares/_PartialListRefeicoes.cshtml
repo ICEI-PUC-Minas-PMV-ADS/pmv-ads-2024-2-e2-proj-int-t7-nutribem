@@ -1,0 +1,35 @@
+﻿@model IEnumerable<NutriBem.Models.Refeicao>
+
+<h3>Refeições</h3>
+@if (Model != null && Model.Any())
+{
+    <ul>
+        @foreach (var refeicao in Model)
+        {
+            <li>
+                <strong>@refeicao.Tipo</strong> - @refeicao.Hora
+                <ul>
+
+                    <li><strong>Receita:</strong> @refeicao.Receita.Nome</li>
+                    <li><strong>Ingredientes:</strong> @refeicao.Receita.IngredienteQuantidade</li>
+                    <li><strong>Modo de Preparo:</strong> @refeicao.Receita.MododePreparo</li>
+                    <li><strong>Observações:</strong> @refeicao.Receita.Observacoes</li>
+                    <li><strong>Calorias:</strong> @refeicao.Receita.Calorias</li>
+                    <li><strong>Curtidas:</strong> @refeicao.Receita.Curtidas</li>
+                </ul>
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="@refeicao.Id" />
+                    <button class="btn btn-danger deleteRefeicaoBtn" data-id="@refeicao.Id">Excluir</button>
+                </form>
+                <button class=" btn btn-secondary editRefeicaoBtn" data-id="@refeicao.Id" data-bs-toggle="modal" data-bs-target="#editarRefeicaoModal">Editar</button>
+
+
+
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Nenhuma refeição encontrada.</p>
+}

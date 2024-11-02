@@ -72,7 +72,11 @@ namespace NutriBem.Controllers
                 return NotFound();
             }
 
-            var planoAlimentar = await _context.PlanosAlimentares.FindAsync(id);
+            var planoAlimentar = await _context.PlanosAlimentares
+                .Include(p => p.Refeicoes)
+                .ThenInclude(r => r.Receita)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
             if (planoAlimentar == null)
             {
                 return NotFound();
@@ -152,5 +156,28 @@ namespace NutriBem.Controllers
         {
             return _context.PlanosAlimentares.Any(e => e.Id == id);
         }
+
+        public async Task<IActionResult> RefeicoesPartial(int id)
+        {
+            var refeicoes = await _context.Refeicoes
+                .Include(r => r.Receita)
+                .Where(r => r.PlanoAlimentarId == id)
+                .ToListAsync();
+
+            return PartialView("_PartialListRefeicoes", refeicoes);
+        }
+
+        public async Task<IActionResult> CreateRefeicaoPartial(int planoAlimentarId)
+        {
+            // Log para ver se a ação é chamada corretamente
+            Console.WriteLine($"Plano Alimentar ID: {planoAlimentarId}");
+
+            var receitas = await _context.Receitas.ToListAsync();
+            ViewBag.Receitas = new SelectList(receitas, "Id", "Nome");
+            ViewBag.PlanoAlimentarId = planoAlimentarId;
+            return PartialView("_PartialCreateRefeicoes", new Refeicao());
+        }
+
+
     }
 }
