@@ -12,7 +12,7 @@ namespace NutriBem.Models
 
         [Required(ErrorMessage ="Obrigatório informar o tipo de refeição")]
         [Display(Name ="Tipo de refeição")]
-        public int Tipo { get; set; }
+        public String Tipo { get; set; }
 
         [Required(ErrorMessage ="Obrigatório informar o horário da refeição")]
         [Display(Name ="Horário da Refeição")]
