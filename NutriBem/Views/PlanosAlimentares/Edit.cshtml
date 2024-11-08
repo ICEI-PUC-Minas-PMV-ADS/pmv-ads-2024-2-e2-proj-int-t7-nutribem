@@ -64,7 +64,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body" id="modalContent"> 
+            <div class="modal-body" id="modalContentCriar">
                 <!-- O conteúdo do formulário será carregado aqui -->
             </div>
             <div id="validationErrors" class="text-danger"></div>
@@ -72,7 +72,23 @@
     </div>
 </div>
 
-
+<!-- Modal para Editar uma Refeição-->
+<div class="modal fade" id="editarRefeicaoModal" tabindex="-1" role="dialog" aria-labelledby="editarRefeicaoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarRefeicaoModalLabel">Editar refeição</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modalContentEditar">
+                <!-- O conteúdo do formulário será carregado aqui -->
+            </div>
+            <div id="validationErrors" class="text-danger"></div>
+        </div>
+    </div>
+</div>
 
 @section Scripts {
     <script>
@@ -121,12 +137,12 @@
                     type: 'GET',
                     data: { planoAlimentarId: planoAlimentarId }, // Passa o ID do plano alimentar
                     success: function (data) {
-                        $('#modalContent').html(data);
+                        $('#modalContentCriar').html(data);
                         console.log("Conteúdo carregado no modal.");
                     },
                     error: function (xhr, status, error) {
                         console.error("Erro ao carregar o conteúdo do modal:", error); // Log do erro
-                        $('#modalContent').html('<p>Erro ao carregar conteúdo.</p>');
+                        $('#modalContentCriar').html('<p>Erro ao carregar conteúdo.</p>');
                     }
                 });
             });
@@ -161,6 +177,67 @@
                 }
             });
         });
+
+        // Chamada para abrir o modal de editar a refeição
+        $(document).ready(function () {
+            $(document).on('click', '.editRefeicaoBtn', function () {
+                var refeicaoId = $(this).data('id'); // Obtém o id da refeição
+
+                // Fazer a requisição AJAX para carregar o conteúdo da edição da refeição
+                $.ajax({
+                    url: '@Url.Action("EditRefeicaoPartial", "PlanosAlimentares")', // Ação do controlador que retorna a partial view
+                    type: 'GET',
+                    data: { id: refeicaoId }, // Passa o id da refeição
+                    success: function (data) {
+                        // Carregar o conteúdo no modal
+                        $('#modalContentEditar').html(data);
+                        $('#editarRefeicaoModal').modal('show'); // Mostrar o modal após o conteúdo ser carregado
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Erro ao carregar o conteúdo da refeição para edição:", error);
+                        $('#modalContent').html('<p>Erro ao carregar conteúdo.</p>');
+                    }
+                });
+            });
+        });
+
+        // Enviar o formulário de edição com AJAX
+        $(document).on('submit', '#editarRefeicaoModal form', function (e) {
+            e.preventDefault(); // Evita o envio tradicional do formulário
+
+            var refeicaoId = $('#Id').val();
+            var planoAlimentarId = '@Model.Id';
+
+            var formData = $(this).serialize() + '&id=' + refeicaoId + '&PlanoAlimentarId=' + planoAlimentarId;
+
+            console.log(formData);  // Veja os dados que estão sendo enviados
+
+            $.ajax({
+                url: '@Url.Action("Edit", "Refeicoes")',
+                type: 'POST',
+                data: formData, // Envia os dados serializados
+                success: function (response) {
+                    if (response.success) {
+                        $('#editarRefeicaoModal').modal('hide'); // Fecha o modal
+                        alert(response.message); // Exibe a mensagem de sucesso
+                        location.reload(); // Recarrega a página ou atualiza a lista via AJAX
+                    } else {
+                        alert(response.message); // Exibe a mensagem de erro
+                        if (response.errors) {
+                            console.log(response.errors); // Verifique os erros de validação
+                        }
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error("Erro ao editar a refeição:", error);
+                    alert('Erro ao editar a refeição.');
+                }
+            });
+        });
+
+
+
+
 
         // Carregar as refeições na inicialização
         $(document).ready(function () {

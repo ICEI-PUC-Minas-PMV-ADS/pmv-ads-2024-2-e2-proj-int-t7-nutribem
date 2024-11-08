@@ -179,5 +179,28 @@ namespace NutriBem.Controllers
         }
 
 
+        public async Task<IActionResult> EditRefeicaoPartial(int id)
+        {
+            // Obtém a refeição pelo id
+            var refeicao = await _context.Refeicoes
+                .Include(r => r.Receita)  // Certifique-se de incluir as receitas
+                .FirstOrDefaultAsync(r => r.Id == id);
+
+            // Se não encontrar a refeição
+            if (refeicao == null)
+            {
+                return NotFound();
+            }
+
+            // Passa as receitas para o dropdown na view
+            var receitas = await _context.Receitas.ToListAsync();
+            ViewBag.Receitas = new SelectList(receitas, "Id", "Nome");
+
+            // Retorna a partial view com os dados da refeição
+            return PartialView("_PartialEditRefeicoes", refeicao);
+        }
+
+
+
     }
 }

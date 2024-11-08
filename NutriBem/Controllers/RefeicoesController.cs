@@ -101,30 +101,36 @@ namespace NutriBem.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(refeicao);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!RefeicaoExists(refeicao.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                // Captura todos os erros de validação
+                var errors = ModelState.Values.SelectMany(v => v.Errors)
+                                               .Select(e => e.ErrorMessage)
+                                               .ToList();
+
+                return Json(new { success = false, message = "Erro ao editar a refeição.", errors = errors });
             }
-            ViewData["PlanoAlimentarId"] = new SelectList(_context.PlanosAlimentares, "Id", "Descricao", refeicao.PlanoAlimentarId);
-            ViewData["ReceitaId"] = new SelectList(_context.Receitas, "Id", "IngredienteQuantidade", refeicao.ReceitaId);
-            return View(refeicao);
+
+            try
+            {
+                _context.Update(refeicao);
+                await _context.SaveChangesAsync();
+                return Json(new { success = true, message = "Refeição editada com sucesso!" });
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!RefeicaoExists(refeicao.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
         }
+
+
 
         /* GET: Refeicoes/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -167,10 +173,6 @@ namespace NutriBem.Controllers
             // Retornar uma resposta de sucesso
             return Json(new { success = true });
         }
-
-
-
-
 
         private bool RefeicaoExists(int id)
         {
