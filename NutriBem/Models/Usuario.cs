@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NutriBem.Models
 {
-    [PrimaryKey("Cpf")]
     public abstract class Usuario
     {
         [Required(ErrorMessage = "Obrigatório informar o nome")]
@@ -20,7 +19,7 @@ namespace NutriBem.Models
 
         public string Senha { get; set; }
 
-        
+        [Key]
         [Required(ErrorMessage = "Obrigatório informar o CPF")]
         public int Cpf { get; set; }
 
@@ -59,8 +58,8 @@ namespace NutriBem.Models
         public bool Pagante { get; set; }
 
 
-        [ForeignKey("CpfNutricionista")]
-        public int CpfNutricionista {get; set;}
+        [ForeignKey("Cpf")]
+        public int? CpfNutricionista {get; set;}
         
         public Nutricionista Nutricionista {  get; set; }
 

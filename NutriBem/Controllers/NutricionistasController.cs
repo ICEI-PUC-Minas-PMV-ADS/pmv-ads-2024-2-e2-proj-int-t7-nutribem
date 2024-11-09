@@ -53,12 +53,14 @@ namespace NutriBem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Crn,Nome,Email,DataNascimento,Senha,Cpf,Telefone")] Nutricionista nutricionista)
+        public async Task<IActionResult> Create([Bind("Cpf,Nome,Email,DataNascimento,Senha,Telefone,Crn")] Nutricionista nutricionista)
         {
             if (ModelState.IsValid)
             {
+                _context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Nutricionista ON");
                 _context.Add(nutricionista);
                 await _context.SaveChangesAsync();
+                _context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Nutricionista OFF");
                 return RedirectToAction(nameof(Index));
             }
             return View(nutricionista);

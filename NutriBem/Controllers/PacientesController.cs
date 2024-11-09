@@ -57,8 +57,10 @@ namespace NutriBem.Controllers
         {
             if (ModelState.IsValid)
             {
+                _context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Nutricionista ON");
                 _context.Add(paciente);
                 await _context.SaveChangesAsync();
+                _context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Nutricionista OFF");
                 return RedirectToAction(nameof(Index));
             }
             return View(paciente);
