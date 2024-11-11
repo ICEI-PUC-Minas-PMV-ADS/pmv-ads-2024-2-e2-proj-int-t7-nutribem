@@ -28,5 +28,7 @@ namespace NutriBem.Models
         }
         public DbSet<NutriBem.Models.Refeicao> Refeicao { get; set; }
 
+        public DbSet<Comentario> Comentarios { get; set; }
+
     }
 }

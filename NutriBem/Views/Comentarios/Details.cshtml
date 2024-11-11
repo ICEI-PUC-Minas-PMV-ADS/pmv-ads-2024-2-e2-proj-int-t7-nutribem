@@ -1,0 +1,16 @@
+﻿@model NutriBem.Models.Comentario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Diário Alimentar</h1>
+
+<h2>Detalhes do Diário</h2>
+
+<div>
+    <h4>@Model.Nome</h4>
+    <p><strong>Data e Hora:</strong> @Model.DataHora.ToString("dd/MM/yyyy HH:mm")</p>
+    <p><strong>Conteúdo:</strong> @Model.Conteudo</p>
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+</div>
