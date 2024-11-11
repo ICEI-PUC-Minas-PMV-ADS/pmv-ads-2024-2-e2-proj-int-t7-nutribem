@@ -1,0 +1,21 @@
+﻿@model NutriBem.Models.Comentario
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Diário Alimentar</h1>
+
+<h2>Deletar Anotação</h2>
+
+<div>
+    <h4>Tem certeza que deseja deletar este comentário?</h4>
+    <h5>@Model.Nome</h5>
+    <p>@Model.Conteudo</p>
+    <form asp-action="Delete" method="post">
+        <!-- Aqui deve ser "Delete" -->
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Deletar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
