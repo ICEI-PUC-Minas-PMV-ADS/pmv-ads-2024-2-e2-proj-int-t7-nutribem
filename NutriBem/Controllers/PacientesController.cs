@@ -25,7 +25,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Pacientes/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
@@ -65,7 +65,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Pacientes/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
             {
@@ -85,7 +85,7 @@ namespace NutriBem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Altura,Peso,Pagante,CpfNutricionista,Nome,Email,DataNascimento,Senha,Cpf,Telefone")] Paciente paciente)
+        public async Task<IActionResult> Edit(string id, [Bind("Altura,Peso,Pagante,CpfNutricionista,Nome,Email,DataNascimento,Senha,Cpf,Telefone")] Paciente paciente)
         {
             if (id != paciente.Cpf)
             {
@@ -116,7 +116,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Pacientes/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {
@@ -136,7 +136,7 @@ namespace NutriBem.Controllers
         // POST: Pacientes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var paciente = await _context.Pacientes.FindAsync(id);
             if (paciente != null)
@@ -148,7 +148,7 @@ namespace NutriBem.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PacienteExists(int id)
+        private bool PacienteExists(string id)
         {
             return _context.Pacientes.Any(e => e.Cpf == id);
         }

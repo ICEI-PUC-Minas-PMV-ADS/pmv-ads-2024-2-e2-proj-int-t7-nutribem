@@ -5,15 +5,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NutriBem.Models;
 
 #nullable disable
 
 namespace NutriBem.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241021230039_Teste")]
-    partial class Teste
+    [Migration("20241112001129_AjusteCpfStringNaoAutoIncremental")]
+    partial class AjusteCpfStringNaoAutoIncremental
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,11 +26,12 @@ namespace NutriBem.Migrations
 
             modelBuilder.Entity("NutriBem.Models.Nutricionista", b =>
                 {
-                    b.Property<int>("Cpf")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("Cpf")
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Cpf"));
+                    b.Property<int>("Crn")
+                        .HasColumnType("int");
 
                     b.Property<DateOnly>("DataNascimento")
                         .HasColumnType("date");
@@ -57,11 +57,9 @@ namespace NutriBem.Migrations
 
             modelBuilder.Entity("NutriBem.Models.Paciente", b =>
                 {
-                    b.Property<int>("Cpf")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Cpf"));
+                    b.Property<string>("Cpf")
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<double>("Altura")
                         .HasColumnType("float");
@@ -80,8 +78,8 @@ namespace NutriBem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("NutricionistaCpf")
-                        .HasColumnType("int");
+                    b.Property<string>("NutricionistaCpf")
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<bool>("Pagante")
                         .HasColumnType("bit");
@@ -110,6 +108,10 @@ namespace NutriBem.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -120,6 +122,9 @@ namespace NutriBem.Migrations
 
                     b.Property<string>("Objetivo")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Observacao")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -161,6 +166,36 @@ namespace NutriBem.Migrations
                     b.ToTable("Receitas");
                 });
 
+            modelBuilder.Entity("NutriBem.Models.Refeicao", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<TimeOnly>("Hora")
+                        .HasColumnType("time");
+
+                    b.Property<int>("PlanoAlimentarId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ReceitaId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PlanoAlimentarId");
+
+                    b.HasIndex("ReceitaId");
+
+                    b.ToTable("Refeicoes");
+                });
+
             modelBuilder.Entity("NutriBem.Models.Paciente", b =>
                 {
                     b.HasOne("NutriBem.Models.Nutricionista", "Nutricionista")
@@ -170,9 +205,33 @@ namespace NutriBem.Migrations
                     b.Navigation("Nutricionista");
                 });
 
+            modelBuilder.Entity("NutriBem.Models.Refeicao", b =>
+                {
+                    b.HasOne("NutriBem.Models.PlanoAlimentar", "PlanoAlimentar")
+                        .WithMany("Refeicoes")
+                        .HasForeignKey("PlanoAlimentarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NutriBem.Models.Receita", "Receita")
+                        .WithMany()
+                        .HasForeignKey("ReceitaId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("PlanoAlimentar");
+
+                    b.Navigation("Receita");
+                });
+
             modelBuilder.Entity("NutriBem.Models.Nutricionista", b =>
                 {
                     b.Navigation("Pacientes");
+                });
+
+            modelBuilder.Entity("NutriBem.Models.PlanoAlimentar", b =>
+                {
+                    b.Navigation("Refeicoes");
                 });
 #pragma warning restore 612, 618
         }

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NutriBem.Models
 {
-    [PrimaryKey("Cpf")]
+
     public abstract class Usuario
     {
         [Required(ErrorMessage = "Obrigatório informar o nome")]
@@ -20,9 +20,11 @@ namespace NutriBem.Models
 
         public string Senha { get; set; }
 
-        
+        [Key] // Chave primária
         [Required(ErrorMessage = "Obrigatório informar o CPF")]
-        public int Cpf { get; set; }
+        [StringLength(11, ErrorMessage = "O CPF deve ter 11 caracteres.")]
+        [RegularExpression(@"^\d{11}$", ErrorMessage = "O CPF deve ser composto por 11 dígitos numéricos.")]
+        public string Cpf { get; set; } // Alterado para string
 
         [Required(ErrorMessage = "Obrigatório informar o telefone")]
         public required int Telefone { get; set; }
@@ -30,11 +32,11 @@ namespace NutriBem.Models
         public Usuario() { }
 
         public Usuario(
-            string nome, 
-            string email, 
-            DateOnly dataNascimento, 
-            string senha, 
-            int cpf, 
+            string nome,
+            string email,
+            DateOnly dataNascimento,
+            string senha,
+            string cpf,  // Alterado para string
             int telefone
         )
         {
@@ -42,7 +44,7 @@ namespace NutriBem.Models
             Email = email;
             DataNascimento = dataNascimento;
             Senha = senha;
-            Cpf = cpf;
+            Cpf = cpf; // Alterado para string
             Telefone = telefone;
         }
     }
@@ -58,19 +60,17 @@ namespace NutriBem.Models
 
         public bool Pagante { get; set; }
 
-
         [ForeignKey("CpfNutricionista")]
-        public int CpfNutricionista {get; set;}
-        
-        public Nutricionista Nutricionista {  get; set; }
+        public int CpfNutricionista { get; set; }
 
-        public Paciente() { }  
+        public Nutricionista Nutricionista { get; set; }
+
+        public Paciente() { }
 
         public Paciente(
-            double altura, double peso, string nome, string email, 
-            DateOnly dataNascimento, string senha, int cpf, int telefone
-           ) : 
-            base (nome, email, dataNascimento, senha, cpf, telefone)
+            double altura, double peso, string nome, string email,
+            DateOnly dataNascimento, string senha, string cpf, int telefone
+        ) : base(nome, email, dataNascimento, senha, cpf, telefone)
         {
             Altura = altura;
             Peso = peso;
@@ -83,14 +83,13 @@ namespace NutriBem.Models
         [Required(ErrorMessage = "Obrigatório informar o CRM")]
         public int Crn { get; set; }
 
-        public ICollection<Paciente> Pacientes {get; set;}
+        public ICollection<Paciente> Pacientes { get; set; }
 
         public Nutricionista() { }
 
-    public Nutricionista(
-            int crn, string nome, string email, DateOnly dataNascimento, string senha, int cpf, int telefone
-        ) :
-            base(nome, email, dataNascimento, senha, cpf, telefone)
+        public Nutricionista(
+            int crn, string nome, string email, DateOnly dataNascimento, string senha, string cpf, int telefone
+        ) : base(nome, email, dataNascimento, senha, cpf, telefone)
         {
             Crn = crn;
         }
