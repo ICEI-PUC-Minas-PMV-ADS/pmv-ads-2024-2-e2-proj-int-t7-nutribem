@@ -6,11 +6,26 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace NutriBem.Migrations
 {
     /// <inheritdoc />
-    public partial class AjusteCpfStringNaoAutoIncremental : Migration
+    public partial class Update_banco : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Comentarios",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DataHora = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Conteudo = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comentarios", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Nutricionista",
                 columns: table => new
@@ -136,6 +151,9 @@ namespace NutriBem.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Comentarios");
+
             migrationBuilder.DropTable(
                 name: "Paciente");
 

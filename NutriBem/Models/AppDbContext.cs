@@ -10,6 +10,7 @@ public class AppDbContext : DbContext
     public DbSet<Nutricionista> Nutricionistas { get; set; }
     public DbSet<PlanoAlimentar> PlanosAlimentares { get; set; }
     public DbSet<Refeicao> Refeicoes { get; set; }
+    public DbSet<Comentario> Comentarios { get; set; }
 
     public DbSet<NutriBem.Models.Refeicao> Refeicao { get; set; }
 
