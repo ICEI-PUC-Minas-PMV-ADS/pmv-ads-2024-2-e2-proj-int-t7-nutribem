@@ -25,7 +25,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Nutricionistas/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
@@ -65,7 +65,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Nutricionistas/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
             {
@@ -85,7 +85,7 @@ namespace NutriBem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Crn,Nome,Email,DataNascimento,Senha,Cpf,Telefone")] Nutricionista nutricionista)
+        public async Task<IActionResult> Edit(string id, [Bind("Crn,Nome,Email,DataNascimento,Senha,Cpf,Telefone")] Nutricionista nutricionista)
         {
             if (id != nutricionista.Cpf)
             {
@@ -116,7 +116,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Nutricionistas/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {
@@ -136,7 +136,7 @@ namespace NutriBem.Controllers
         // POST: Nutricionistas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var nutricionista = await _context.Nutricionistas.FindAsync(id);
             if (nutricionista != null)
@@ -148,7 +148,7 @@ namespace NutriBem.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool NutricionistaExists(int id)
+        private bool NutricionistaExists(string id)
         {
             return _context.Nutricionistas.Any(e => e.Cpf == id);
         }
