@@ -20,14 +20,16 @@ namespace NutriBem.Models
 
         public string Senha { get; set; }
 
-        [Key] // Chave primária
+        [Key] 
         [Required(ErrorMessage = "Obrigatório informar o CPF")]
         [StringLength(11, ErrorMessage = "O CPF deve ter 11 caracteres.")]
         [RegularExpression(@"^\d{11}$", ErrorMessage = "O CPF deve ser composto por 11 dígitos numéricos.")]
-        public string Cpf { get; set; } // Alterado para string
+        public string Cpf { get; set; }
 
+        [StringLength(11, ErrorMessage = "O telefone deve ter 11 dígitos.")]
+        [RegularExpression(@"^\d{11}$", ErrorMessage = "O CPF deve ser composto por 11 dígitos numéricos.")]
         [Required(ErrorMessage = "Obrigatório informar o telefone")]
-        public required int Telefone { get; set; }
+        public string Telefone { get; set; }
 
         public Usuario() { }
 
@@ -36,15 +38,15 @@ namespace NutriBem.Models
             string email,
             DateOnly dataNascimento,
             string senha,
-            string cpf,  // Alterado para string
-            int telefone
+            string cpf, 
+            string telefone
         )
         {
             Nome = nome;
             Email = email;
             DataNascimento = dataNascimento;
             Senha = senha;
-            Cpf = cpf; // Alterado para string
+            Cpf = cpf; 
             Telefone = telefone;
         }
     }
@@ -69,7 +71,7 @@ namespace NutriBem.Models
 
         public Paciente(
             double altura, double peso, string nome, string email,
-            DateOnly dataNascimento, string senha, string cpf, int telefone
+            DateOnly dataNascimento, string senha, string cpf, string telefone
         ) : base(nome, email, dataNascimento, senha, cpf, telefone)
         {
             Altura = altura;
@@ -88,7 +90,7 @@ namespace NutriBem.Models
         public Nutricionista() { }
 
         public Nutricionista(
-            int crn, string nome, string email, DateOnly dataNascimento, string senha, string cpf, int telefone
+            int crn, string nome, string email, DateOnly dataNascimento, string senha, string cpf, string telefone
         ) : base(nome, email, dataNascimento, senha, cpf, telefone)
         {
             Crn = crn;
