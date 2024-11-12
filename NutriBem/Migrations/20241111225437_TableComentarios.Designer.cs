@@ -3,16 +3,20 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using NutriBem.Models;
 
 #nullable disable
 
 namespace NutriBem.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241111225437_TableComentarios")]
+    partial class TableComentarios
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,9 +49,11 @@ namespace NutriBem.Migrations
 
             modelBuilder.Entity("NutriBem.Models.Nutricionista", b =>
                 {
-                    b.Property<string>("Cpf")
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
+                    b.Property<int>("Cpf")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Cpf"));
 
                     b.Property<int>("Crn")
                         .HasColumnType("int");
@@ -76,9 +82,11 @@ namespace NutriBem.Migrations
 
             modelBuilder.Entity("NutriBem.Models.Paciente", b =>
                 {
-                    b.Property<string>("Cpf")
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
+                    b.Property<int>("Cpf")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Cpf"));
 
                     b.Property<double>("Altura")
                         .HasColumnType("float");
@@ -97,8 +105,8 @@ namespace NutriBem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NutricionistaCpf")
-                        .HasColumnType("nvarchar(11)");
+                    b.Property<int?>("NutricionistaCpf")
+                        .HasColumnType("int");
 
                     b.Property<bool>("Pagante")
                         .HasColumnType("bit");
