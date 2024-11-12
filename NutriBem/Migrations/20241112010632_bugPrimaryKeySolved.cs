@@ -6,17 +6,31 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace NutriBem.Migrations
 {
     /// <inheritdoc />
-    public partial class modelBuilderPrimaryKey : Migration
+    public partial class bugPrimaryKeySolved : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Comentarios",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DataHora = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Conteudo = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comentarios", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Nutricionista",
                 columns: table => new
                 {
-                    Cpf = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Cpf = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
                     Crn = table.Column<int>(type: "int", nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -68,13 +82,12 @@ namespace NutriBem.Migrations
                 name: "Paciente",
                 columns: table => new
                 {
-                    Cpf = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Cpf = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
                     Altura = table.Column<double>(type: "float", nullable: false),
                     Peso = table.Column<double>(type: "float", nullable: false),
                     Pagante = table.Column<bool>(type: "bit", nullable: false),
-                    CpfNutricionista = table.Column<int>(type: "int", nullable: true),
-                    NutricionistaCpf = table.Column<int>(type: "int", nullable: true),
+                    CpfNutricionista = table.Column<int>(type: "int", nullable: false),
+                    NutricionistaCpf = table.Column<string>(type: "nvarchar(11)", nullable: true),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DataNascimento = table.Column<DateOnly>(type: "date", nullable: false),
@@ -138,6 +151,9 @@ namespace NutriBem.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Comentarios");
+
             migrationBuilder.DropTable(
                 name: "Paciente");
 
