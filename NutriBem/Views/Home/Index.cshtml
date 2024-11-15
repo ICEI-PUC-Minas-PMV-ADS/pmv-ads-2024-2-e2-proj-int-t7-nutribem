@@ -2,7 +2,45 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bem Vindo</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
+
+
+
+
+<div class=" mb-5 d-flex flex-column align-items-center justify-content-center">
+    <img src="~/Images/Logo-Nutribem.jpg" class="Logo" alt="" />
+    <p class="h1">Bem-vindo</p>
 </div>
+
+<div class="d-flex flex-row mb-3 justify-content-center">
+    <div class="p-2 d-flex flex-column align-items-center justify-content-center">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Pacientes" asp-action="Index">
+            <img src="~/Images/Icon-PacientesPage.jpg" class="img-thumbnail submenu" alt="...">
+        </a>
+        <p class="h4">Pacientes</p>
+    </div>
+    <div class="p-2 d-flex flex-column align-items-center justify-content-center">
+        <a class="nav-link text-dark" asp-area="" asp-controller="PlanosAlimentares" asp-action="Index">
+            <img src="~/Images/Icon-PlanoAlimentarPage.jpg" class="img-thumbnail submenu" alt="...">
+        </a>
+        <p class="h4">Plano Alimentar</p>
+    </div>
+    <div class="p-2 d-flex flex-column align-items-center justify-content-center">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Comentarios" asp-action="Index">
+            <img src="~/Images/Icon-DiarioAlimentarPage.jpg" class="img-thumbnail submenu" alt="...">
+        </a>
+        <p class="h4">Diário Alimentar</p>
+    </div>
+    <div class="p-2 d-flex flex-column align-items-center justify-content-center">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Receitas" asp-action="Index">
+            <img src="~/Images/Icon-ReceitasPage.jpg" class="img-thumbnail submenu" alt="...">
+        </a>
+        <p class="h4">Receitas</p>
+    </div>
+</div>
+
+
+
+
+
+        

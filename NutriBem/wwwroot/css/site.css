@@ -18,5 +18,71 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: 0px;
+}
+
+/* Estilo da navbar com fundo verde (green-600) */
+.navbar {
+    background-color: #D2ECCF !important; /* Cor verde */
+    color: white; /* Cor do texto branca */
+}
+
+    /* Estilo do texto da navbar */
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+        color: white; /* Texto branco */
+    }
+
+/* Estilo do botão de toggler (hamburguer) */
+.navbar-toggler-icon {
+    background-color: white; /* Cor do ícone do toggler (hamburguer) */
+}
+
+/* Hover para links da navbar */
+.navbar .nav-link:hover {
+    color: #2f855a; /* Cor mais escura para hover (green-500) */
+}
+
+/* Estilo da offcanvas com fundo verde */
+.offcanvas-start {
+    background-color: #95B963; /* Cor verde (green-600) */
+    color: white; /* Texto branco */
+}
+
+    /* Estilo para o texto da offcanvas */
+    .offcanvas-start .offcanvas-header,
+    .offcanvas-start .offcanvas-body {
+        color: white; /* Cor do texto branco na offcanvas */
+    }
+
+    /* Estilo do botão de fechar na offcanvas */
+    .offcanvas-start .btn-close {
+        color: white; /* Cor do botão de fechar */
+    }
+
+    /* Alterar a cor de fundo do item de navegação na offcanvas */
+    .offcanvas-start .navbar-nav .nav-link {
+        color: white; /* Cor branca para os links */
+    }
+
+        .offcanvas-start .navbar-nav .nav-link:hover {
+            color: #2f855a; /* Hover verde mais escuro */
+        }
+
+.imagem{
+    height:60px;
+    width:190px;
+}
+
+.menu {
+    width: fit-content;
+    height: 100vh;
+    background-color: #95B963;
+}
+
+.conteudo{
+    display:grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "menu pages"
+
 }
