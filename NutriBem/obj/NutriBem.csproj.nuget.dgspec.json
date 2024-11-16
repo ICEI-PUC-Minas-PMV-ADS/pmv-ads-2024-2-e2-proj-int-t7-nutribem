@@ -1,37 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\Ka Far\\source\\repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\NutriBem.csproj": {}
+    "C:\\Users\\Joel\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\NutriBem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ka Far\\source\\repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\NutriBem.csproj": {
+    "C:\\Users\\Joel\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\NutriBem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ka Far\\source\\repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\NutriBem.csproj",
+        "projectUniqueName": "C:\\Users\\Joel\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\NutriBem.csproj",
         "projectName": "NutriBem",
-        "projectPath": "C:\\Users\\Ka Far\\source\\repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\NutriBem.csproj",
-        "packagesPath": "C:\\Users\\Ka Far\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ka Far\\source\\repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\obj\\",
+        "projectPath": "C:\\Users\\Joel\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\NutriBem.csproj",
+        "packagesPath": "C:\\Users\\Joel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Joel\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ka Far\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "C:\\Users\\Victor\\source\\repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\NutriBem.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Victor\\source\\repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\NutriBem.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Victor\\source\\repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\NutriBem.csproj",
-        "projectName": "NutriBem",
-        "projectPath": "C:\\Users\\Victor\\source\\repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\NutriBem.csproj",
-        "packagesPath": "C:\\Users\\Victor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Victor\\source\\repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Victor\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 1f6971c04fe1ffd6df7e58db0f012a4408418c84
+          "C:\\Users\\Joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,10 +46,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "BCrypt.Net-Next": {
-              "target": "Package",
-              "version": "[4.0.3, )"
-            },
             "FluentNHibernate": {
               "target": "Package",
               "version": "[3.4.0, )"
