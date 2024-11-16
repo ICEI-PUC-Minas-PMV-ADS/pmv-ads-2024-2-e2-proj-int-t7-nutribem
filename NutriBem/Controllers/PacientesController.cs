@@ -57,6 +57,7 @@ namespace NutriBem.Controllers
         {
             if (ModelState.IsValid)
             {
+                paciente.Senha = BCrypt.Net.BCrypt.HashPassword(paciente.Senha);
                 _context.Add(paciente);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -96,6 +97,7 @@ namespace NutriBem.Controllers
             {
                 try
                 {
+                    paciente.Senha = BCrypt.Net.BCrypt.HashPassword(paciente.Senha);
                     _context.Update(paciente);
                     await _context.SaveChangesAsync();
                 }
