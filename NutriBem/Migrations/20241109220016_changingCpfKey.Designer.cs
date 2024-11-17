@@ -3,16 +3,20 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using NutriBem.Models;
 
 #nullable disable
 
 namespace NutriBem.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241109220016_changingCpfKey")]
+    partial class changingCpfKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,33 +25,13 @@ namespace NutriBem.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("NutriBem.Models.Comentario", b =>
+            modelBuilder.Entity("NutriBem.Models.Nutricionista", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("Cpf")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Conteudo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("DataHora")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Nome")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Comentarios");
-                });
-
-            modelBuilder.Entity("NutriBem.Models.Nutricionista", b =>
-                {
-                    b.Property<string>("Cpf")
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Cpf"));
 
                     b.Property<int>("Crn")
                         .HasColumnType("int");
@@ -66,10 +50,8 @@ namespace NutriBem.Migrations
                     b.Property<string>("Senha")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Telefone")
-                        .IsRequired()
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
+                    b.Property<int>("Telefone")
+                        .HasColumnType("int");
 
                     b.HasKey("Cpf");
 
@@ -78,9 +60,11 @@ namespace NutriBem.Migrations
 
             modelBuilder.Entity("NutriBem.Models.Paciente", b =>
                 {
-                    b.Property<string>("Cpf")
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
+                    b.Property<int>("Cpf")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Cpf"));
 
                     b.Property<double>("Altura")
                         .HasColumnType("float");
@@ -99,8 +83,8 @@ namespace NutriBem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NutricionistaCpf")
-                        .HasColumnType("nvarchar(11)");
+                    b.Property<int?>("NutricionistaCpf")
+                        .HasColumnType("int");
 
                     b.Property<bool>("Pagante")
                         .HasColumnType("bit");
@@ -111,10 +95,8 @@ namespace NutriBem.Migrations
                     b.Property<string>("Senha")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Telefone")
-                        .IsRequired()
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
+                    b.Property<int>("Telefone")
+                        .HasColumnType("int");
 
                     b.HasKey("Cpf");
 
