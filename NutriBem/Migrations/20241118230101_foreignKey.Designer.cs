@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace NutriBem.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241112231838_phoneNumberConvertedToString")]
-    partial class phoneNumberConvertedToString
+    [Migration("20241118230101_foreignKey")]
+    partial class foreignKey
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -88,8 +88,8 @@ namespace NutriBem.Migrations
                     b.Property<double>("Altura")
                         .HasColumnType("float");
 
-                    b.Property<int>("CpfNutricionista")
-                        .HasColumnType("int");
+                    b.Property<string>("CpfNutricionista")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateOnly>("DataNascimento")
                         .HasColumnType("date");
