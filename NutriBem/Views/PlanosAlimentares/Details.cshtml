@@ -4,45 +4,67 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
 
-<div>
-    <h4>PlanoAlimentar</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nomepaciente)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nomepaciente)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Objetivo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Objetivo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Observacao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Observacao)
-        </dd>
-    </dl>
+<div class=" ms-5 mb-5 d-flex flex-column justify-content-start">
+    <div>
+        <h1>PlanoAlimentar</h1>
+        <h4>Criado pelo profissional: Nome do profissional</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nomepaciente)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nomepaciente)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Objetivo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Objetivo)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Descricao)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Descricao)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Observacao)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Observacao)
+            </dd>
+        </dl>
+    </div>
+    <div class="ms-5" id="partialZone">
+        @await Html.PartialAsync("_PartialListRefeicoes", Model.Refeicoes)
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-success">Edit</a> |
+        <a asp-action="Index" class="btn btn-danger">Voltar </a>
+    </div>
+
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-success">Edit</a> |
-    <a asp-action="Index" class="btn btn-danger">Voltar </a>
-</div>
+
+
+
+@section Scripts{
+    <script>
+            // Carregar as refeições na zona de partial
+            function loadRefeicoes() {
+                $('#partialZone').load('@Url.Action("RefeicoesPartial", "PlanosAlimentares", new { id = Model.Id })');
+        }
+
+        // Carregar as refeições na inicialização
+        $(document).ready(function () {
+            loadRefeicoes();
+        });
+    </script>
+}
