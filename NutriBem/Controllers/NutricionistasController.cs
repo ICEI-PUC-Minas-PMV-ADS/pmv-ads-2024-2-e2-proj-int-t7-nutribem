@@ -155,5 +155,10 @@ namespace NutriBem.Controllers
         {
             return _context.Nutricionistas.Any(e => e.Cpf == id);
         }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
     }
 }
