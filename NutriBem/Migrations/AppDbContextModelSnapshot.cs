@@ -85,8 +85,8 @@ namespace NutriBem.Migrations
                     b.Property<double>("Altura")
                         .HasColumnType("float");
 
-                    b.Property<int>("CpfNutricionista")
-                        .HasColumnType("int");
+                    b.Property<string>("CpfNutricionista")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateOnly>("DataNascimento")
                         .HasColumnType("date");

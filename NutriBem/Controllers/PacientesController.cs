@@ -45,6 +45,7 @@ namespace NutriBem.Controllers
         // GET: Pacientes/Create
         public IActionResult Create()
         {
+            ViewData["CpfNutricionista"] = new SelectList(_context.Nutricionistas, "Cpf", "Nome");
             return View();
         }
 
@@ -53,15 +54,16 @@ namespace NutriBem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Altura,Peso,Pagante,CpfNutricionista,Nome,Email,DataNascimento,Senha,Cpf,Telefone")] Paciente paciente)
+        public async Task<IActionResult> Create([Bind("Altura,Peso,Pagante,Nome,Email,DataNascimento,Senha,Cpf,Telefone, CpfNutricionista")] Paciente paciente)
         {
             if (ModelState.IsValid)
             {
                 paciente.Senha = BCrypt.Net.BCrypt.HashPassword(paciente.Senha);
-                _context.Add(paciente);
+                _context.Add(paciente); 
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["CpfNutricionista"] = new SelectList(_context.Nutricionistas, "Cpf", "Nome", paciente.CpfNutricionista);
             return View(paciente);
         }
 

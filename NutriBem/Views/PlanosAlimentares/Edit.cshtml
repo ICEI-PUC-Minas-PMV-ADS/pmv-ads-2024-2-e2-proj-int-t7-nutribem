@@ -4,8 +4,11 @@
     ViewData["Title"] = "Edit";
 }
 
-<div class="ms-5 mb-4">
-    <h1>Editar</h1>
+<h1>Editar</h1>
+
+<h4>Plano Alimentar</h4>
+<hr />
+<div class="row">
     <div class="col-md-4">
         <form asp-action="Edit" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -35,22 +38,21 @@
                 <input asp-for="Observacao" class="form-control" />
                 <span asp-validation-for="Observacao" class="text-danger"></span>
             </div>
-            <div class="form-group mt-3">
+            <div class="form-group">
                 <input type="submit" value="Salvar" class="btn btn-success" /> |
-                <a asp-action="Index" class="btn btn-danger">Voltar</a> |
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#novaRefeicaoModal">
-                    Adicionar Refeição
-                </button>
+                <a asp-action="Index" class="btn btn-danger">Voltar</a>
             </div>
         </form>
     </div>
 </div>
 
-<div class="ms-5" id="partialZone">
+<div id="partialZone">
     @await Html.PartialAsync("_PartialListRefeicoes", Model.Refeicoes)
 </div>
 
-
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#novaRefeicaoModal">
+    Adicionar Refeição
+</button>
 
 <!-- Modal para Criar Nova Refeição -->
 <div class="modal fade" id="novaRefeicaoModal" tabindex="-1" role="dialog" aria-labelledby="novaRefeicaoModalLabel" aria-hidden="true">
@@ -232,6 +234,10 @@
                 }
             });
         });
+
+
+
+
 
         // Carregar as refeições na inicialização
         $(document).ready(function () {

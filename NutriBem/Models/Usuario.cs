@@ -63,7 +63,7 @@ namespace NutriBem.Models
         public bool Pagante { get; set; }
 
         [ForeignKey("CpfNutricionista")]
-        public int CpfNutricionista { get; set; }
+        public string CpfNutricionista { get; set; }
 
         public Nutricionista Nutricionista { get; set; }
 
@@ -71,7 +71,7 @@ namespace NutriBem.Models
 
         public Paciente(
             double altura, double peso, string nome, string email,
-            DateOnly dataNascimento, string senha, string cpf, string telefone
+            DateOnly dataNascimento, string senha, string cpf, string telefone, string cpfNutricionista
         ) : base(nome, email, dataNascimento, senha, cpf, telefone)
         {
             Altura = altura;
