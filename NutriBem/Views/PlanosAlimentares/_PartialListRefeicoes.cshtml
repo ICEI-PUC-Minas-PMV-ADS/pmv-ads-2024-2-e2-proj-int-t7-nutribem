@@ -1,34 +1,56 @@
 ﻿@model IEnumerable<NutriBem.Models.Refeicao>
 
+<link rel="stylesheet" href="~/css/PlanoAlimentar.css" asp-append-version="true" />
+
 <h3>Refeições</h3>
 @if (Model != null && Model.Any())
 {
-    <ul>
-        @foreach (var refeicao in Model)
-        {
-            <li>
-                <strong>@refeicao.Tipo</strong> - @refeicao.Hora
-                <ul>
-
-                    <li><strong>Receita:</strong> @refeicao.Receita.Nome</li>
-                    <li><strong>Ingredientes:</strong> @refeicao.Receita.IngredienteQuantidade</li>
-                    <li><strong>Modo de Preparo:</strong> @refeicao.Receita.MododePreparo</li>
-                    <li><strong>Observações:</strong> @refeicao.Receita.Observacoes</li>
-                    <li><strong>Calorias:</strong> @refeicao.Receita.Calorias</li>
-                    <li><strong>Curtidas:</strong> @refeicao.Receita.Curtidas</li>
-                </ul>
-                <form asp-action="Delete">
-                    <input type="hidden" asp-for="@refeicao.Id" />
-                    <button class="btn btn-danger deleteRefeicaoBtn" data-id="@refeicao.Id">Excluir</button>
-                </form>
-                <button class=" btn btn-secondary editRefeicaoBtn" data-id="@refeicao.Id" data-bs-toggle="modal" data-bs-target="#editarRefeicaoModal">Editar</button>
-
-
-
-            </li>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        @{
+            var contador = 1;
         }
-    </ul>
-}
+    @foreach (var refeicao in Model)
+    {
+            var collapseID = "flush-collapse" + contador;
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header container-fluid d-flex justify-content-between align-items-center">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#@collapseID" aria-expanded="true" aria-controls="@collapseID">
+                        <strong>@refeicao.Tipo</strong> - @refeicao.Hora
+                    </button>         
+                </h2>
+                <div id="@collapseID" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex flex-row mb-3">
+                        <div class="p-2">
+                            <ul>
+                                <li><strong>Receita:</strong> @refeicao.Receita.Nome</li>
+                                <li><strong>Ingredientes:</strong> @refeicao.Receita.IngredienteQuantidade</li>
+                                <li><strong>Modo de Preparo:</strong> @refeicao.Receita.MododePreparo</li>
+                                <li><strong>Observações:</strong> @refeicao.Receita.Observacoes</li>
+                                <li><strong>Calorias:</strong> @refeicao.Receita.Calorias</li>
+                                <li><strong>Curtidas:</strong> @refeicao.Receita.Curtidas</li>
+                            </ul>
+                            <div class="d-flex gap-2">
+                                <form asp-action="Delete">
+                                    <input type="hidden" asp-for="@refeicao.Id" />
+                                    <button class="deleteRefeicaoBtn" data-id="@refeicao.Id">
+                                        <span class="bi bi-trash"></span>
+                                    </button>
+                                </form>
+                                <button class="editRefeicaoBtn" data-id="@refeicao.Id" data-bs-toggle="modal" data-bs-target="#editarRefeicaoModal">
+                                    <span class="bi bi-pencil-square"></span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            contador++;
+    }
+
+</div>
+        }
+   
 else
 {
     <p>Nenhuma refeição encontrada.</p>

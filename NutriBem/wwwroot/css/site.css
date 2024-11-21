@@ -19,10 +19,12 @@ html {
 
 body {
   margin-bottom: 0px;
+  min-height: 100%
 }
 
 /* Estilo da navbar com fundo verde (green-600) */
 .navbar {
+    min-width: 100vh;
     background-color: #D2ECCF !important; /* Cor verde */
     color: white; /* Cor do texto branca */
 }
@@ -76,7 +78,7 @@ body {
 
 .menu {
     width: fit-content;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #95B963;
 }
 
