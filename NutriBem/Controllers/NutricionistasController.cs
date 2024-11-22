@@ -207,7 +207,7 @@ namespace NutriBem.Controllers
 
                 await HttpContext.SignInAsync(principal, props);
 
-                Redirect("/");
+                return Redirect("/");
             }
             else
             {
