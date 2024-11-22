@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -160,5 +163,58 @@ namespace NutriBem.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(Nutricionista nutricionista)
+        {
+            //Armazena na variável a linha da tabela nutricionistas referente ao CPF passado pelo usuário na View
+            var dados = await _context.Nutricionistas.FindAsync(nutricionista.Cpf);
+
+            //Verifica se os dados por acaso são nulos. Se forem, a mensagem abaixo aparece por meio da ViewBag
+            if(dados == null)
+            {
+                ViewBag.Message = "Usuário e/ou senha inválidos!";
+                return View();
+            }
+
+            //o método abaixo recebe dois parâmetros: o primeiro é a senha passada pelo usuário e o outro é a senha do banco de dados.
+            //a variável recebe um valor booleano conforme o resultado da verificação feita pelo método BCrypt
+            bool senhaEstaCorreta = BCrypt.Net.BCrypt.Verify(nutricionista.Senha, dados.Senha);
+
+            //se a senha está correta, é feita a autenticação do usuário
+            if (senhaEstaCorreta)
+            {
+                //cria as credenciais do usuário
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, dados.Nome),
+                    new Claim(ClaimTypes.NameIdentifier, dados.Cpf.ToString()),
+                };
+
+                //"envelopa" as credeciais do usuário
+                var nutricionistaIdentidade = new ClaimsIdentity(claims, "login");
+                ClaimsPrincipal principal = new ClaimsPrincipal(nutricionistaIdentidade);
+
+                //define em quanto tempo a senha do usuário vai expirar
+                var props = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    //define que a senha expira em oito horas
+                    ExpiresUtc = DateTime.UtcNow.ToLocalTime().AddHours(8),
+                    //persistent no cookie do usuário.
+                    IsPersistent = true
+                };
+
+                await HttpContext.SignInAsync(principal, props);
+
+                Redirect("/");
+            }
+            else
+            {
+                ViewBag.Message = "Usuário e/ou senha inválidos!";
+            }
+            return View();
+        }
+
     }
 }

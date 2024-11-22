@@ -1,9 +1,10 @@
 ﻿@model NutriBem.Models.Nutricionista
 
 @{
-    ViewData["Title"] = "Login Nutricionista";
+    ViewData["Title"] = "Edit";
 }
 
+<h1>Login</h1>
 
 <h4>Nutricionista</h4>
 <hr />
@@ -25,6 +26,14 @@
                 <input type="submit" value="Acessar" class="btn btn-success" />
             </div>
         </form>
-        <h3></h3>
+        <h3>@ViewBag.Message</h3>
     </div>
 </div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
