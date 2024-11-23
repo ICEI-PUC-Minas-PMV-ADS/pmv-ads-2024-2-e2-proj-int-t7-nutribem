@@ -16,7 +16,20 @@
                 <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="Index">
                     <img src="~/Images/Logocortada.jpg" class="rounded float-start imagem" />
                 </a>
-                <h2>Nome do usuário</h2>
+                <div class="login">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <p >
+                            Olá, @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Nutricionistas" asp-action="Logout">Sair</a>
+                        </p>
+                    }
+                    else
+                    {
+                        <p class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Nutricionistas" asp-action="Login">Login</a>
+                        </p>
+                    }
+                </div>
             </div>
         </nav>
 

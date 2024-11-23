@@ -86,3 +86,13 @@ body {
     grid-template-areas: "menu pages"
 
 }
+
+.login{
+    height: 5rem;
+    width:10rem;
+}
+
+.login p{
+    color: black;
+    width: 10rem;
+}

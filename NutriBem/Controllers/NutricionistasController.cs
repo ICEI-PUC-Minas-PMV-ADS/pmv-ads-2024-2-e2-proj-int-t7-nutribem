@@ -216,5 +216,12 @@ namespace NutriBem.Controllers
             return View();
         }
 
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+
+            return RedirectToAction("Login", "Nutricionistas");
+        }
+
     }
 }
