@@ -165,6 +165,7 @@ namespace NutriBem.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(Nutricionista nutricionista)
         {
             //Armazena na variável a linha da tabela nutricionistas referente ao CPF passado pelo usuário na View
@@ -189,6 +190,7 @@ namespace NutriBem.Controllers
                 {
                     new Claim(ClaimTypes.Name, dados.Nome),
                     new Claim(ClaimTypes.NameIdentifier, dados.Cpf.ToString()),
+                    new Claim(ClaimTypes.Role, "nutricionista" )
                 };
 
                 //"envelopa" as credeciais do usuário
@@ -215,12 +217,17 @@ namespace NutriBem.Controllers
             }
             return View();
         }
-
+        [AllowAnonymous]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
 
             return RedirectToAction("Login", "Nutricionistas");
+        }
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
 
     }

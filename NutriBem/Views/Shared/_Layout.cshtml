@@ -19,14 +19,25 @@
                 <div class="login">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <p >
-                            Olá, @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Nutricionistas" asp-action="Logout">Sair</a>
-                        </p>
+                        @if(User.IsInRole("nutricionista"))
+                        {
+                            <p>
+                                Olá, @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Nutricionistas" asp-action="Logout">Sair</a>
+                            </p>
+                        }
+                        @if (User.IsInRole("paciente"))
+                        {
+                            <p>
+                                Olá, @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Pacientes" asp-action="Logout">Sair</a>
+                            </p>
+                        }
+                        
                     }
                     else
                     {
                         <p class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Nutricionistas" asp-action="Login">Login</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Nutricionistas" asp-action="Login">Logar como nutricionista</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Pacientes" asp-action="Login">Logar como paciente</a>
                         </p>
                     }
                 </div>
