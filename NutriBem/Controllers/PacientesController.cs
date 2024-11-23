@@ -68,7 +68,7 @@ namespace NutriBem.Controllers
                 paciente.Senha = BCrypt.Net.BCrypt.HashPassword(paciente.Senha);
                 _context.Add(paciente); 
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Login));
             }
             ViewData["CpfNutricionista"] = new SelectList(_context.Nutricionistas, "Cpf", "Nome", paciente.CpfNutricionista);
             return View(paciente);
