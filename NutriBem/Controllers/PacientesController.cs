@@ -22,12 +22,14 @@ namespace NutriBem.Controllers
         }
 
         // GET: Pacientes
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Pacientes.ToListAsync());
         }
 
         // GET: Pacientes/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)
@@ -46,6 +48,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Pacientes/Create
+        [AllowAnonymous]
         public IActionResult Create()
         {
             ViewData["CpfNutricionista"] = new SelectList(_context.Nutricionistas, "Cpf", "Nome");
@@ -57,6 +60,7 @@ namespace NutriBem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> Create([Bind("Altura,Peso,Pagante,Nome,Email,DataNascimento,Senha,Cpf,Telefone, CpfNutricionista")] Paciente paciente)
         {
             if (ModelState.IsValid)
@@ -71,6 +75,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Pacientes/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
@@ -91,6 +96,7 @@ namespace NutriBem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Edit(string id, [Bind("Altura,Peso,Pagante,CpfNutricionista,Nome,Email,DataNascimento,Senha,Cpf,Telefone")] Paciente paciente)
         {
             if (id != paciente.Cpf)
@@ -123,6 +129,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Pacientes/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -143,6 +150,7 @@ namespace NutriBem.Controllers
         // POST: Pacientes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var paciente = await _context.Pacientes.FindAsync(id);

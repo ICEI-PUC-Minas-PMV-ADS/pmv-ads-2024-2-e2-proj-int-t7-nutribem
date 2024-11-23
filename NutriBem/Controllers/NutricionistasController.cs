@@ -22,12 +22,14 @@ namespace NutriBem.Controllers
         }
 
         // GET: Nutricionistas
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Nutricionistas.ToListAsync());
         }
 
         // GET: Nutricionistas/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)
@@ -46,6 +48,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Nutricionistas/Create
+        [AllowAnonymous]
         public IActionResult Create()
         {
             return View();
@@ -56,6 +59,7 @@ namespace NutriBem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> Create([Bind("Crn,Nome,Email,DataNascimento,Senha,Cpf,Telefone")] Nutricionista nutricionista)
         {
 
@@ -70,6 +74,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Nutricionistas/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
@@ -90,6 +95,7 @@ namespace NutriBem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Edit(string id, [Bind("Crn,Nome,Email,DataNascimento,Senha,Cpf,Telefone")] Nutricionista nutricionista)
         {
             if (id != nutricionista.Cpf)
@@ -122,6 +128,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Nutricionistas/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -142,6 +149,7 @@ namespace NutriBem.Controllers
         // POST: Nutricionistas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var nutricionista = await _context.Nutricionistas.FindAsync(id);
