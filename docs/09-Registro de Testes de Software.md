@@ -16,6 +16,8 @@ https://github.com/user-attachments/assets/caf7aeab-0ea5-4e34-9f4e-47d65908768d
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-002 - Nutricionista cadastra um paciente e utiliza CRUD's para o seu gerenciamento. |
 |Registro de evidência | Vídeo abaixo. |
+
+https://github.com/user-attachments/assets/10e2d90a-006f-4773-b661-7de18274f8b4
 <Hr>
 
 | **Caso de Teste** 	| **CT-03 – Cadastrar paciente** 	|
@@ -30,12 +32,14 @@ https://github.com/user-attachments/assets/91b6f714-731d-4bb3-b5ee-c86bf281feb2
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-004 - Realizar login utilizando e-mail e senha. |
 |Registro de evidência | Vídeo abaixo. |
+
+https://github.com/user-attachments/assets/14b80917-2798-432f-ba99-ec0f87821607
 <Hr>
 
 | **Caso de Teste** 	| **CT-05 – Testar recuperação de senha.** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-005 - Recuperar a senha através do e-mail registrado. |
-|Registro de evidência | Vídeo abaixo. |
+|Registro de evidência |Será implementado.|
 <Hr>
 
 | **Caso de Teste** 	| **CT-06 – Cadastrar/editar/excluir plano alimentar** 	|
@@ -49,7 +53,8 @@ https://github.com/user-attachments/assets/3d439b93-9f0d-402c-bc43-bbc774533547
 | **Caso de Teste** 	| **CT-07 – Fazer comentário sobre o plano alimentar** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-007 - Fazer comentário sobre o plano alimentar pelo paciente. |
-|Registro de evidência | Vídeo abaixo. |
+|Registro de evidência | Decido pelo grupo pela não implementação. |
+
 <Hr>
 
 | **Caso de Teste** 	| **CT-08 – Registrar diário alimentar** 	|
@@ -71,7 +76,7 @@ https://github.com/user-attachments/assets/a3aa3932-f607-4931-b1b3-58e7516b30a5
 | **Caso de Teste** 	| **CT-10 – Registrar perda de peso do paciente e exibir histórico** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-010 - Registrar perda de peso do paciente ao longo do tempo e exibir o histórico desta informação. |
-|Registro de evidência | Vídeo abaixo. |
+|Registro de evidência | Decido pelo grupo pela não implementação. |
 <Hr>
 
 | **Caso de Teste** 	| **CT-11 – Avaliar as receitas** 	|
@@ -85,13 +90,15 @@ https://github.com/user-attachments/assets/daf6668a-900e-4e9b-9660-26a5da073536
 | **Caso de Teste** 	| **CT-12 – Calcular IMC** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-012 - Calcular índice de massa corpórea para o usuário nutricionista. |
-|Registro de evidência | Vídeo abaixo. |
+|Registro de evidência |Decido pelo grupo pela não implementação.|
 <Hr>
 
 | **Caso de Teste** 	| **CT-13 – Testar alteração de dados de cadastro** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-013 - Permitir que tanto o paciente quanto o nutricionista alterem seus dados de cadastro. |
 |Registro de evidência | Vídeo abaixo. |
+
+https://github.com/user-attachments/assets/744d4296-7e24-4c0c-a3c2-12b67a98a4ca
 <Hr>
 
 ## Avaliação
