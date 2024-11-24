@@ -4544,5 +4544,4 @@ C:\Users\Victor\source\repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t
 C:\Users\Victor\source\repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\obj\Debug\net8.0\NutriBem.genruntimeconfig.cache
 C:\Users\Victor\source\repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\obj\Debug\net8.0\ref\NutriBem.dll
 C:\Users\Victor\source\repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\bin\Debug\net8.0\BCrypt.Net-Next.dll
-C:\Users\Joel\Source\Repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\guilh\Desktop\Nutribem\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\bin\Debug\net8.0\BCrypt.Net-Next.dll

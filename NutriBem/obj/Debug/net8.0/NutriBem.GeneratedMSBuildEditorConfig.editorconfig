@@ -54,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/guilh/Desktop/Nutribem/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnV0cmljaW9uaXN0YXNcQWNjZXNzRGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/guilh/Desktop/Nutribem/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnV0cmljaW9uaXN0YXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -74,6 +78,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnV0cmljaW9uaXN0YXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/guilh/Desktop/Nutribem/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnV0cmljaW9uaXN0YXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/guilh/Desktop/Nutribem/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -92,6 +100,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/guilh/Desktop/Nutribem/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/Desktop/Nutribem/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/guilh/Desktop/Nutribem/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/Create.cshtml]
