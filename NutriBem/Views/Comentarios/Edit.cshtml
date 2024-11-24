@@ -4,23 +4,39 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Diário Alimentar</h1>
+<h1 class="mb-4 pt-4 ps-5">Diário Alimentar</h1>
 
-<h2>Editar Anotação</h2>
+<h4 class="mb-3 ps-5">Editar anotação:</h4>
 
-<form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" />
-    <div class="form-group">
-        <label asp-for="Nome">Seu Nome</label>
-        <input asp-for="Nome" class="form-control" required />
-        <span asp-validation-for="Nome" class="text-danger"></span>
+<div class="container-fluid px-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form asp-action="Edit" method="post">
+
+
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+
+                <div class="form-group mb-3">
+                    <label asp-for="Nome" class="control-label fw-bold"></label>
+                    <input asp-for="Nome" class="form-control" style="border-color: #95B963;" required />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label asp-for="Conteudo" class="control-label fw-bold"></label>
+                    <textarea asp-for="Conteudo" class="form-control" style="border-color: #95B963;" required placeholder="Insira suas vitórias e desafios na sua jornada de saúde..." rows="10"></textarea>
+                    <span asp-validation-for="Conteudo" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group d-flex justify-content-between mt-4">
+                    <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;" asp-action="Index">Voltar</a>
+                    <button type="submit" class="btn" style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;">Salvar</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Conteudo">Anotações</label>
-        <textarea asp-for="Conteudo" class="form-control" required placeholder="Insira suas vitórias e desafios na sua jornada de saúde..." rows="10"></textarea>
-        <span asp-validation-for="Conteudo" class="text-danger"></span>
-    </div>
-    <button type="submit" class="btn btn-primary">Salvar</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-</form>
+</div>
 
