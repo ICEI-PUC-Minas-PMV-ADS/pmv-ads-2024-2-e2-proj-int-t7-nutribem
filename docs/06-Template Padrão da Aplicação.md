@@ -14,7 +14,7 @@ As páginas terão como elementos padrões o menu de navegação, o header e o f
   
 ## Fonte usada:
 
-Font-family: var(--bs-body-font-family);
+Font-family: var(--bs-body-font-family);<br>
 font-size: var(--bs-body-font-size);
 
 
