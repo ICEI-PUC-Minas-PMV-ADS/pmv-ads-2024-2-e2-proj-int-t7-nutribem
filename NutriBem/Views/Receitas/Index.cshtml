@@ -4,76 +4,55 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Receitas</h1>
+<div class="d-flex justify-content-center align-items-center mt-5">
+    <div class="container">
+        <h1 class="mb-4">Receitas</h1>
 
-<p>
-    <a class="btn btn-primary" asp-action="Create">Criar nova Receita</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IngredienteQuantidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MododePreparo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Observacoes)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Calorias)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Curtidas)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IngredienteQuantidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MododePreparo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Observacoes)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Calorias)
-            </td>
-                <td>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                             fill="currentColor" class="bi bi-heart" id="heart-icon-@item.Id"
-                             viewBox="0 0 16 16" onclick="likeRecipe(@item.Id)">
-                            <path id="heart-path-@item.Id"
-                                  d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                        </svg>
-                        <span id="likes-count-@item.Id">@item.Curtidas</span>
+        <div class="accordion" id="accordionReceitas">
+            @foreach (var item in Model)
+            {
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-@item.Id">
+                        <button class="accordion-button collapsed"
+                                style="background-color: #95B963; color: black; font-weight: bold;"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse-@item.Id"
+                                aria-expanded="false"
+                                aria-controls="collapse-@item.Id">
+                            @item.Nome
+                        </button>
+                    </h2>
+                    <div id="collapse-@item.Id" class="accordion-collapse collapse"
+                         aria-labelledby="heading-@item.Id"
+                         data-bs-parent="#accordionReceitas">
+                        <div class="accordion-body" style="background-color: #D2ECCF; color: black;">
+                            <p><strong>Ingredientes e Quantidades:</strong> @item.IngredienteQuantidade</p>
+                            <p><strong>Modo de Preparo:</strong> @item.MododePreparo</p>
+                            <p><strong>Observações:</strong> @item.Observacoes</p>
+                            <p><strong>Calorias:</strong> @item.Calorias</p>
+                            <p>
+                                <strong>Curtidas:</strong>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-heart" id="heart-icon-@item.Id" viewBox="0 0 16 16" onclick="likeRecipe(@item.Id)">
+                                    <path id="heart-path-@item.Id" d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                                <span id="likes-count-@item.Id">@item.Curtidas</span>
+                            </p>
+                            <div class="d-flex justify-content-start">
+                                <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; margin-right: 10px; font-weight: bold;" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                                <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; margin-right: 10px; font-weight: bold;" asp-action="Details" asp-route-id="@item.Id">Visualizar</a>
+                                <a class="btn btn-danger" style="color: black; margin-right: 10px; font-weight: bold;" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                            </div>
+                        </div>
                     </div>
-                </td>
-            <td>
-                 <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Editar</a> 
-                 <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Visualizar</a> 
-                 <a class="btn btn-primary" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
-            </td>
+                </div>
+            }
+        </div>
 
 
-                <script src="~/js/site.js"> </script>
-
-
-
-        </tr>
-}
-    </tbody>
-</table>
+        <div class="d-flex justify-content-start mt-3">
+            <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;" asp-action="Create">Criar nova Receita</a>
+        </div>
+    </div>
+</div>

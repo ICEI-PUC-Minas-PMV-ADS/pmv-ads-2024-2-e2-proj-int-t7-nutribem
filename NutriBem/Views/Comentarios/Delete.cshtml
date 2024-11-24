@@ -4,18 +4,38 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Diário Alimentar</h1>
+<h1 class="mb-4 pt-4 ps-5">Deletar Anotação</h1>
 
-<h2>Deletar Anotação</h2>
+<h3 class="ps-5 mb-4">Tem certeza que deseja deletar este comentário?</h3>
 
-<div>
-    <h4>Tem certeza que deseja deletar este comentário?</h4>
-    <h5>@Model.Nome</h5>
-    <p>@Model.Conteudo</p>
-    <form asp-action="Delete" method="post">
-        <!-- Aqui deve ser "Delete" -->
-        <input type="hidden" asp-for="Id" />
-        <button type="submit" class="btn btn-danger">Deletar</button>
-        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-    </form>
+<div class="container-fluid px-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <div class="card p-4" style="border-color: #95B963;">
+
+
+                <div class="mb-4">
+                    <span style="color: #95B963;">@Model.Nome</span>
+                    <br />
+                    <small class="text-muted">@Model.DataHora.ToString("dd/MM/yyyy HH:mm")</small>
+                </div>
+
+
+                <div class="mb-3">
+                    <hr style="border-color: #95B963;" />
+                    <p>@Model.Conteudo</p>
+                </div>
+
+            </div>
+
+            <form asp-action="Delete" method="post">
+                <input type="hidden" asp-for="Id" />
+                <div class="d-flex justify-content-between mt-4">
+                    <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;" asp-action="Index">Voltar</a>
+                    <button type="submit" class="btn btn-danger" style="font-weight: bold; color: black;">Deletar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
