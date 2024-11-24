@@ -4,31 +4,49 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Diário Alimentar</h1>
+<div class="container-fluid px-5">
 
-<a asp-action="Create" class="btn btn-primary">Adicionar Anotação</a>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1 class="mb-4 pt-4 mt-4">Diário Alimentar</h1>
+        </div>
+    </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Data e Hora</th>
-            <th>Conteúdo</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-    <tbody>
+
+    <div class="row">
         @foreach (var comentario in Model)
         {
-            <tr>
-                <td>@comentario.Nome</td>
-                <td>@comentario.DataHora.ToString("dd/MM/yyyy HH:mm")</td>
-                <td>@comentario.Conteudo</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@comentario.Id" class="btn btn-warning">Editar</a>
-                    <a asp-action="Delete" asp-route-id="@comentario.Id" class="btn btn-danger">Deletar</a>
-                </td>
-            </tr>
+            <div class="col-md-8 offset-md-2 mb-4">
+                <div class="card shadow p-4" style="border-color: #95B963;">
+                    <div class="d-flex justify-content-between">
+
+                        <div>
+                            <span class="fw-bold" style="color: #95B963;">@comentario.Nome</span>
+                            <br />
+                            <small class="text-muted">@comentario.DataHora.ToString("dd/MM/yyyy HH:mm")</small>
+                        </div>
+
+                        <div>
+                            <a asp-action="Edit" asp-route-id="@comentario.Id"
+                               class="btn btn-sm me-2"
+                               style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;">Editar</a>
+                            <a asp-action="Delete" asp-route-id="@comentario.Id"
+                               class="btn btn-sm btn-danger"
+                               style="color: black; font-weight: bold;">Deletar</a>
+                        </div>
+                    </div>
+
+                    <hr style="border-color: #95B963;" />
+                    <p class="mb-0">@comentario.Conteudo</p>
+                </div>
+            </div>
         }
-    </tbody>
-</table>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-8 offset-md-2 mb-4">
+            <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;" asp-action="Create">Adicionar Anotação</a>
+        </div>
+    </div>
+</div>
