@@ -1,22 +1,25 @@
 cff-version: 1.0.1
 message: Sistema para planejamento de viagens
-title: Mochileiros
+title: NUTRIBEM
 authors:
-  - family-names: Menezes Matias da Silva
-    given-names: João Pedro
-  - family-names: Fonseca Amorim
-    given-names: Igor 
-  - family-names: Almeida Dias 
-    given-names: Luiz Fernando 
-  - name-suffix: Professora
+  - family-names: Clara Dunningham Matos Seixas
+    given-names: Ana
+  - family-names: Henrique Salviano
+    given-names: Guilherme
+ - family-names: Onofre de Sao Jose Junior
+    given-names: Joel
+  - family-names: Reis
+    given-names: Karina
+- family-names: Emanuel de Souza
+    given-names: Victor
+  - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: De Nardin
-    given-names: Luciana
+    family-names: Jeunon de Alencar
+    given-names: Bernardo
 keywords:
-  - viagens
-  - mochileiros
-  - gastos
-repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t5-mochileiros
+  - Nutrição
+  - Acompanhamento
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2024-06-26
+date-released: 2024-11-24
