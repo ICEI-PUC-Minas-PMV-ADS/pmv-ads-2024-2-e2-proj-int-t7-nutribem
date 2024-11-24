@@ -29,11 +29,11 @@ body {
     color: white; /* Cor do texto branca */
 }
 
-    /* Estilo do texto da navbar */
-    .navbar .navbar-brand,
-    .navbar .nav-link {
-        color: white; /* Texto branco */
-    }
+/* Estilo do texto da navbar */
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: white; /* Texto branco */
+}
 
 /* Estilo do botão de toggler (hamburguer) */
 .navbar-toggler-icon {
@@ -51,25 +51,25 @@ body {
     color: white; /* Texto branco */
 }
 
-    /* Estilo para o texto da offcanvas */
-    .offcanvas-start .offcanvas-header,
-    .offcanvas-start .offcanvas-body {
-        color: white; /* Cor do texto branco na offcanvas */
-    }
+/* Estilo para o texto da offcanvas */
+.offcanvas-start .offcanvas-header,
+.offcanvas-start .offcanvas-body {
+    color: white; /* Cor do texto branco na offcanvas */
+}
 
-    /* Estilo do botão de fechar na offcanvas */
-    .offcanvas-start .btn-close {
-        color: white; /* Cor do botão de fechar */
-    }
+/* Estilo do botão de fechar na offcanvas */
+.offcanvas-start .btn-close {
+    color: white; /* Cor do botão de fechar */
+}
 
-    /* Alterar a cor de fundo do item de navegação na offcanvas */
-    .offcanvas-start .navbar-nav .nav-link {
-        color: white; /* Cor branca para os links */
-    }
+/* Alterar a cor de fundo do item de navegação na offcanvas */
+.offcanvas-start .navbar-nav .nav-link {
+    color: white; /* Cor branca para os links */
+}
 
-        .offcanvas-start .navbar-nav .nav-link:hover {
-            color: #2f855a; /* Hover verde mais escuro */
-        }
+.offcanvas-start .navbar-nav .nav-link:hover {
+    color: #2f855a; /* Hover verde mais escuro */
+}
 
 .imagem{
     height:60px;
@@ -88,17 +88,3 @@ body {
     grid-template-areas: "menu pages"
 
 }
-
-.login{
-    align-content:center;
-    display:flex;
-    justify-content:space-between;
-    height: 5rem;
-    width:15rem;
-}
-
-.login p{
-    color: black;
-    width: 100%;
-}
-

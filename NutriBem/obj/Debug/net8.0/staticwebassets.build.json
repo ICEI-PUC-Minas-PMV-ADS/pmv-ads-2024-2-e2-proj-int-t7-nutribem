@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "F/kO7MIFimhFJ6oEQZPoBjNiiV36zIKVLUS0+4RelB0=",
+  "Hash": "v/Ch1PLmm+UgYr4Q4kduxKHNNe3MjuU1jp+C2DoeOvU=",
   "Source": "NutriBem",
   "BasePath": "_content/NutriBem",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Home.css"
+    },
+    {
+      "Identity": "C:\\Users\\guilh\\Desktop\\Nutribem\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\wwwroot\\css\\PlanoAlimentar.css",
+      "SourceId": "NutriBem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\guilh\\Desktop\\Nutribem\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\wwwroot\\",
+      "BasePath": "_content/NutriBem",
+      "RelativePath": "css/PlanoAlimentar.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\PlanoAlimentar.css"
     },
     {
       "Identity": "C:\\Users\\guilh\\Desktop\\Nutribem\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\wwwroot\\css\\site.css",

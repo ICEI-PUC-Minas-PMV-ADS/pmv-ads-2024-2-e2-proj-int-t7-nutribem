@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\css\\Home.css"
     },
     {
+      "Id": "C:\\Users\\guilh\\Desktop\\Nutribem\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\wwwroot\\css\\PlanoAlimentar.css",
+      "PackagePath": "staticwebassets\\css\\PlanoAlimentar.css"
+    },
+    {
       "Id": "C:\\Users\\guilh\\Desktop\\Nutribem\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
