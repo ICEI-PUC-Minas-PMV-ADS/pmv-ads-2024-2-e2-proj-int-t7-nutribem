@@ -17,151 +17,151 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NutriBem
 build_property.RootNamespace = NutriBem
-build_property.ProjectDir = C:\Users\Joel\Source\Repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\
+build_property.ProjectDir = C:\Users\Ana\Source\Repos\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\Joel\Source\Repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem
+build_property.MSBuildProjectDirectory = C:\Users\Ana\Source\Repos\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Comentarios/Create.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Comentarios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZW50YXJpb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Comentarios/Delete.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Comentarios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZW50YXJpb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Comentarios/Details.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Comentarios/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZW50YXJpb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Comentarios/Edit.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Comentarios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZW50YXJpb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Comentarios/Index.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Comentarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZW50YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Home/Index.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Home/Privacy.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/Create.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnV0cmljaW9uaXN0YXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/Delete.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnV0cmljaW9uaXN0YXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/Details.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnV0cmljaW9uaXN0YXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/Edit.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnV0cmljaW9uaXN0YXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/Index.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Nutricionistas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnV0cmljaW9uaXN0YXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Create.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Delete.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Details.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Edit.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Index.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Pacientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/Create.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9zQWxpbWVudGFyZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/Delete.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9zQWxpbWVudGFyZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/Details.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9zQWxpbWVudGFyZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/Edit.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9zQWxpbWVudGFyZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/Index.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9zQWxpbWVudGFyZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/_PartialCreateRefeicoes.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/_PartialCreateRefeicoes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9zQWxpbWVudGFyZXNcX1BhcnRpYWxDcmVhdGVSZWZlaWNvZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/_PartialEditRefeicoes.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/_PartialEditRefeicoes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9zQWxpbWVudGFyZXNcX1BhcnRpYWxFZGl0UmVmZWljb2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/_PartialListRefeicoes.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/PlanosAlimentares/_PartialListRefeicoes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9zQWxpbWVudGFyZXNcX1BhcnRpYWxMaXN0UmVmZWljb2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Receitas/Create.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Receitas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Receitas/Delete.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Receitas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Receitas/Details.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Receitas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Receitas/Edit.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Receitas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Receitas/Index.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Receitas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Shared/Error.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/_ViewImports.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/_ViewStart.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Joel/Source/Repos/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Shared/_Layout.cshtml]
+[C:/Users/Ana/Source/Repos/pmv-ads-2024-2-e2-proj-int-t7-nutribem/NutriBem/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9q12ct4uah

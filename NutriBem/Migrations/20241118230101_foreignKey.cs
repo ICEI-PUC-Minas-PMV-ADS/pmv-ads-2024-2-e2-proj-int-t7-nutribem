@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace NutriBem.Migrations
 {
     /// <inheritdoc />
-    public partial class bugPrimaryKeySolved : Migration
+    public partial class foreignKey : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -36,7 +36,7 @@ namespace NutriBem.Migrations
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DataNascimento = table.Column<DateOnly>(type: "date", nullable: false),
                     Senha = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Telefone = table.Column<int>(type: "int", nullable: false)
+                    Telefone = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -86,13 +86,13 @@ namespace NutriBem.Migrations
                     Altura = table.Column<double>(type: "float", nullable: false),
                     Peso = table.Column<double>(type: "float", nullable: false),
                     Pagante = table.Column<bool>(type: "bit", nullable: false),
-                    CpfNutricionista = table.Column<int>(type: "int", nullable: false),
+                    CpfNutricionista = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NutricionistaCpf = table.Column<string>(type: "nvarchar(11)", nullable: true),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DataNascimento = table.Column<DateOnly>(type: "date", nullable: false),
                     Senha = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Telefone = table.Column<int>(type: "int", nullable: false)
+                    Telefone = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false)
                 },
                 constraints: table =>
                 {

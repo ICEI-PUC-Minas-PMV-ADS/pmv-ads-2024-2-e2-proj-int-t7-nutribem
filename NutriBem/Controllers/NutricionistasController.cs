@@ -55,6 +55,7 @@ namespace NutriBem.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Crn,Nome,Email,DataNascimento,Senha,Cpf,Telefone")] Nutricionista nutricionista)
         {
+
             if (ModelState.IsValid)
             {
                 nutricionista.Senha = BCrypt.Net.BCrypt.HashPassword(nutricionista.Senha);
