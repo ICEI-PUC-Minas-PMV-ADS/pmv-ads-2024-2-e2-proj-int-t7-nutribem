@@ -1,0 +1,27 @@
+﻿﻿.accordion-header {
+    background-color: #95B963;
+    color: black;
+}
+
+.accordion-button {
+    background-color: #95B963;
+    color: black;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #95B963 !important;
+    color: black !important;
+}
+
+.accordion-button:focus {
+    background-color: #95B963 !important;
+    color: black !important;
+}
+
+.accordion-body {
+    background-color: #D2ECCF;
+}
+
+.accordion {
+    width: 1000px
+}
