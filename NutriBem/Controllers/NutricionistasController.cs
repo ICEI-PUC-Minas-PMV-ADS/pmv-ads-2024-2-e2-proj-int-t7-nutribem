@@ -238,11 +238,12 @@ namespace NutriBem.Controllers
             return View();
         }
 
-        public async Task<IActionResult> MeusPacientes(string cpf)
+        [Authorize]
+        public async Task<IActionResult> MeusPacientes(string id)
         {
-            if (cpf == null) return NotFound();
+            if (id == null) return NotFound();
             var pacientes = await _context.Pacientes
-                .Where(c => c.CpfNutricionista == cpf)
+                .Where(c => c.CpfNutricionista == id)
                 .ToListAsync();
 
             ViewBag.MeusPacientes = pacientes;
