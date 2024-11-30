@@ -11,7 +11,6 @@ A Nutribem é uma aplicação dedicada à nutrição, projetada para otimizar a 
 ## Integrantes
 
 * Ana Clara Dunningham Matos Seixas
-* Cristhiane Maria Assi
 * Guilherme Henrique Salviano
 * Joel Onofre de Sao Jose Junior
 * Karina Reis
