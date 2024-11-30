@@ -1,17 +1,19 @@
 ﻿@model IEnumerable<NutriBem.Models.Nutricionista>
+@using System.Security.Claims;
 
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
+<a asp-controller="Nutricionistas" asp-action="MeusPacientes" asp-route-id="@User.FindFirst(ClaimTypes.NameIdentifier).Value">MeusPacientes</a>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
-        <tr>
+        <tr>    
             <th>
                 @Html.DisplayNameFor(model => model.Crn)
             </th>

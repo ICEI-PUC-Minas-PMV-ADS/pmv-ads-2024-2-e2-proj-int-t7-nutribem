@@ -238,5 +238,17 @@ namespace NutriBem.Controllers
             return View();
         }
 
+
+        [AllowAnonymous]
+        public async Task<IActionResult> MeusPacientes(string id)
+        {
+            if (id == null) return NotFound();
+            var pacientes = await _context.Pacientes
+            .Where(c => c.CpfNutricionista == id)
+            .ToListAsync();
+
+            return View(pacientes);
+        }
+
     }
 }
