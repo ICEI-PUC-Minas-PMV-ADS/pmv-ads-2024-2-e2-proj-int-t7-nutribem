@@ -4,69 +4,52 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1 class="mb-4 pt-4 ps-5">Detalhes do Paciente</h1>
 
-<div>
-    <h4>Paciente</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Altura)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Altura)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Peso)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Peso)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Pagante)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Pagante)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CpfNutricionista)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CpfNutricionista)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DataNascimento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DataNascimento)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Cpf)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Cpf)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Telefone)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Telefone)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Cpf">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="container-fluid px-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card p-4" style="border-color: #95B963;">
+
+                <div class="mb-4 text-center">
+                    <span class="fs-4 fw-bold" style="color: #95B963;">
+                        @Html.DisplayFor(model => model.Nome)
+                    </span>
+                </div>
+
+                <div class="mb-3">
+                    <hr style="border-color: #95B963;" />
+                    <dl class="row">
+                        <dt class="col-sm-3 fw-bold">Altura</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Altura)</dd>
+
+                        <dt class="col-sm-3 fw-bold">Peso</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Peso)</dd>
+
+                        <dt class="col-sm-3 fw-bold">Pagante</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Pagante)</dd>
+
+                        <dt class="col-sm-3 fw-bold">CPF do Nutricionista</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.CpfNutricionista)</dd>
+
+                        <dt class="col-sm-3 fw-bold">Email</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Email)</dd>
+
+                        <dt class="col-sm-3 fw-bold">Data de Nascimento</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.DataNascimento)</dd>
+
+                        <dt class="col-sm-3 fw-bold">CPF</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Cpf)</dd>
+
+                        <dt class="col-sm-3 fw-bold">Telefone</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Telefone)</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-start mt-4">
+                <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;" asp-action="Index">Voltar</a>
+            </div>
+        </div>
+    </div>
 </div>

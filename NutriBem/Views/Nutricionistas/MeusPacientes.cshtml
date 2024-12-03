@@ -4,42 +4,32 @@
     ViewData["Title"] = "Meus pacientes";
 }
 
-<h1>Meus pacientes</h1>
+<h1 class="mb-4 pt-4 ps-5">Meus Pacientes</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataNascimento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefone)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DataNascimento)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Telefone)
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="container-fluid px-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="color: #95B963;">@Html.DisplayNameFor(model => model.Nome)</th>
+                        <th style="color: #95B963;">@Html.DisplayNameFor(model => model.Email)</th>
+                        <th style="color: #95B963;">@Html.DisplayNameFor(model => model.DataNascimento)</th>
+                        <th style="color: #95B963;">@Html.DisplayNameFor(model => model.Telefone)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                            <td>@Html.DisplayFor(modelItem => item.DataNascimento)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Telefone)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
