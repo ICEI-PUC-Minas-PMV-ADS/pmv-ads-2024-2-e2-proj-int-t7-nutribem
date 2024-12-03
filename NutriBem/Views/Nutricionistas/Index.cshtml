@@ -5,61 +5,49 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="d-flex justify-content-center align-items-center mt-5">
+    <div class="container">
+        <h1 class="mb-4">Nutricionistas</h1>
 
-<a asp-controller="Nutricionistas" asp-action="MeusPacientes" asp-route-id="@User.FindFirst(ClaimTypes.NameIdentifier).Value">Ver meus pacientes</a>
+        <!-- Accordion com a lista de nutricionistas -->
+        <div class="accordion" id="accordionNutricionistas">
+            @foreach (var item in Model)
+            {
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-@item.Cpf">
+                        <button class="accordion-button collapsed"
+                                style="background-color: #95B963; color: black; font-weight: bold;"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse-@item.Cpf"
+                                aria-expanded="false"
+                                aria-controls="collapse-@item.Cpf">
+                            @item.Nome
+                        </button>
+                    </h2>
+                    <div id="collapse-@item.Cpf" class="accordion-collapse collapse"
+                         aria-labelledby="heading-@item.Cpf"
+                         data-bs-parent="#accordionNutricionistas">
+                        <div class="accordion-body" style="background-color: #D2ECCF; color: black;">
+                            <p><strong>CRN:</strong> @item.Crn</p>
+                            <p><strong>Email:</strong> @item.Email</p>
+                            <p><strong>Data de Nascimento:</strong> @item.DataNascimento</p>
+                            <p><strong>Telefone:</strong> @item.Telefone</p>
+                            <p><strong>CPF:</strong> @item.Cpf</p>
 
+                            <div class="d-flex justify-content-start">
+                                <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; margin-right: 10px; font-weight: bold;" asp-action="Edit" asp-route-id="@item.Cpf">Editar</a>
+                                <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; margin-right: 10px; font-weight: bold;" asp-action="Details" asp-route-id="@item.Cpf">Visualizar</a>
+                                <a class="btn btn-danger" style="color: black; margin-right: 10px; font-weight: bold;" asp-action="Delete" asp-route-id="@item.Cpf">Deletar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Crn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataNascimento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cpf)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefone)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Crn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataNascimento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cpf)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefone)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Cpf">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Cpf">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Cpf">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <div class="d-flex justify-content-start mt-3">
+            <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;" asp-controller="Nutricionistas" asp-action="MeusPacientes" asp-route-id="@User.FindFirst(ClaimTypes.NameIdentifier).Value">Ver meus pacientes</a>
+        </div>
+    </div>
+</div>
