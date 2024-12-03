@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\NutriBem.props" />
+</Project>

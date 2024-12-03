@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="nutribem" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Joel\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\obj\\Release\\net8\.0\\win-x86\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="AppDbContext" description="" value="Server=tcp:nutribemserver.database.windows.net,1433;Initial Catalog=nutribemdb;Persist Security Info=False;User ID=nutribem;Password=Passwordproject#2024;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\Joel\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2024-2-e2-proj-int-t7-nutribem\\NutriBem\\obj\\Release\\net8\.0\\win-x86\\PubTmp\\EFSQLScripts\\AppDbContext\.sql$" />
+  </parameter>
+</parameters>

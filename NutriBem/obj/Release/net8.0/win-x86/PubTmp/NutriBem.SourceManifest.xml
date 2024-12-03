@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\Joel\Source\Repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\obj\Release\net8.0\win-x86\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\Joel\Source\Repos\ICEI-PUC-Minas-PMV-ADS\pmv-ads-2024-2-e2-proj-int-t7-nutribem\NutriBem\obj\Release\net8.0\win-x86\PubTmp\EFSQLScripts\AppDbContext.sql" />
+</sitemanifest>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsorBEEIC9EmtSGPh4XwCSQAAAAACAAAAAAAQZgAAAAEAACAAAACwf/aQZTsNgai8PvgjBkeRAA66mXBJzF3MasLpsXXkpQAAAAAOgAAAAAIAACAAAAC3McZ0pWHy0x6DPBi8U7cUH3xWS5A5evf2CFaDwPYhB4AAAAB4S9DXL6w7wkBXcd4EAEMlQh72Orqt7e2+AmOehJyXuy0AJGOPdu0FyUZsZq1VkgtgHxiN59a42Qtv8HOUmkLR5mulYNLELAowbv9CDW/i81SGAD03tA4dK25Ybn0WBmUlSlDtAo3/39TFGBddmpajEZAkJjJ31TJgpdrzcdNa5UAAAADAbog1Vy0C1UNAxzPV11C8QxTgLjrPScXftinqIi3R39xjqCvmkGhfVyPv+nD2QTaaJVHyhL9tCgUCJmqX4GQu</EncryptedPassword>
+    <History>True|2024-12-03T02:16:08.8437128Z||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:nutribemserver.database.windows.net,1433%3bInitial Catalog=nutribemdb%3bPersist Security Info=False%3bUser ID=nutribem%3bPassword=Passwordproject#2024%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="AppDbContext">
+      <Value>Server=tcp:nutribemserver.database.windows.net,1433%3bInitial Catalog=nutribemdb%3bPersist Security Info=False%3bUser ID=nutribem%3bPassword=Passwordproject#2024%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
