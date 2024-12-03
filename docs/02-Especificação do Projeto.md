@@ -58,11 +58,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-003| Cadastrar um paciente como usuário, com informações pessoais em geral, objetivos e dados ligados a sua saúde ( altura, idade, etc.). | ALTA |
 |RF-004| Realizar login utilizando CPF e senha. | ALTA |
 |RF-005| Cadastrar um plano alimentar pelo nutricionista e utiliza CRUD's para o seu gerenciamento.| ALTA |
-|RF-006| Fazer comentário sobre o plano alimentar pelo paciente.| BAIXA | 
-|RF-007| O paciente Registra o diário alimentar com informações sobre horário das refeições, calorias ingeridas, ingredientes consumidos, etc por meio de um campo Editável.| ALTA | 
-|RF-008| Propor dicas de receitas por nutricionistas e pacientes e utiliza CRUD's para o seu gerenciamento.| MÉDIA | 
-|RF-009| Avaliar as receitas propostas (like ou joinha). | BAIXA | 
-|RF-010| Permitir que tanto o paciente quanto o nutricionista alterem seus dados de cadastro.| ALTA |
+|RF-006| O paciente Registra o diário alimentar com informações sobre horário das refeições, calorias ingeridas, ingredientes consumidos, etc por meio de um campo Editável.| ALTA | 
+|RF-007| Propor dicas de receitas por nutricionistas e pacientes e utiliza CRUD's para o seu gerenciamento.| MÉDIA | 
+|RF-008| Avaliar as receitas propostas (like ou joinha). | BAIXA | 
+|RF-009| Permitir que tanto o paciente quanto o nutricionista alterem seus dados de cadastro.| ALTA |
 
 
 ### Requisitos não Funcionais
