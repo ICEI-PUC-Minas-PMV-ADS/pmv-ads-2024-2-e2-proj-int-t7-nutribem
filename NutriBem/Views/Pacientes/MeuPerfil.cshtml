@@ -1,0 +1,37 @@
+﻿@model IEnumerable<NutriBem.Models.Paciente>
+
+@{
+    ViewData["Title"] = "Meus pacientes";
+}
+
+<h1 class="mb-4 pt-4 ps-5">Meu perfil</h1>
+
+<div class="container-fluid px-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="color: #95B963;">@Html.DisplayNameFor(model => model.Nome)</th>
+                        <th style="color: #95B963;">@Html.DisplayNameFor(model => model.Email)</th>
+                        <th style="color: #95B963;">@Html.DisplayNameFor(model => model.DataNascimento)</th>
+                        <th style="color: #95B963;">@Html.DisplayNameFor(model => model.Telefone)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                            <td>@Html.DisplayFor(modelItem => item.DataNascimento)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Telefone)</td>
+                        </tr>
+                        <a asp-action="Edit" asp-route-id=@item.Cpf>Editar meu perfil</a>
+                    }
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</div>
