@@ -1,6 +1,8 @@
 ﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
@@ -21,14 +23,7 @@ namespace NutriBem.Controllers
         {
             _context = context;
         }
-
-        // GET: Pacientes
-        [Authorize]
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Pacientes.ToListAsync());
-        }
-
+        
         // GET: Pacientes/Details/5
         [Authorize]
         public async Task<IActionResult> Details(string id)
@@ -242,6 +237,11 @@ namespace NutriBem.Controllers
 
         public async Task<IActionResult> MeuPerfil(string id)
         {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            if (userId != id)
+            {
+                return RedirectToAction("AccessDenied", "Nutricionistas");
+            }
             if (id == null) return NotFound();
             var paciente = await _context.Pacientes
                 .Where(c => c.Cpf == id)

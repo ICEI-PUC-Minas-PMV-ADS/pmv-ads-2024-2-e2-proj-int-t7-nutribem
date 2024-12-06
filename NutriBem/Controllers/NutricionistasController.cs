@@ -252,5 +252,23 @@ namespace NutriBem.Controllers
             return View(pacientes);
         }
 
+        public async Task<IActionResult> MeuPerfil(string id)
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            if (userId != id)
+            {
+                return RedirectToAction("AccessDenied", "Nutricionistas");
+            }
+            if (id == null) return NotFound();
+            var nutricionista = await _context.Nutricionistas
+                .Where(c => c.Cpf == id)
+                .ToListAsync();
+
+            ViewBag.MeuPerfil = nutricionista;
+
+
+            return View(nutricionista);
+        }
+
     }
 }
