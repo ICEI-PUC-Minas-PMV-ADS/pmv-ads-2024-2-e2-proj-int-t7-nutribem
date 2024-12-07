@@ -44,6 +44,7 @@ namespace NutriBem.Controllers
             return View(planoAlimentar);
         }
 
+        [Authorize(Roles = "nutricionista")]
         // GET: PlanosAlimentares/Create
         public IActionResult Create()
         {

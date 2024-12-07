@@ -42,9 +42,13 @@
             }
         </div>
 
-
-        <div class="d-flex justify-content-start mt-3">
-            <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;" asp-action="Create">Novo Plano Alimentar</a>
-        </div>
+        @{
+            if (User.IsInRole("nutricionista"))
+            {
+                <div class="d-flex justify-content-start mt-3">
+                    <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;" asp-action="Create">Novo Plano Alimentar</a>
+                </div>
+            } 
+        }
     </div>
 </div>
