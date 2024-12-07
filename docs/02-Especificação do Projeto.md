@@ -90,4 +90,4 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 O diagrama de caso de uso pode ser observado abaixo:
 
-<img src= "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/blob/1834e5e2842a02d7f4fd754f6d37ff89d091bb75/docs/img/D.%20Caso%20de%20uso%20Nutribem%20final.png"/>
+<img src= "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/blob/cd75f26fa4bdc40ac1008aa111081d3d86d91320/docs/img/Diagrama%20de%20Caso%20de%20Uso.png"/>
