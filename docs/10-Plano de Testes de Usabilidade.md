@@ -26,29 +26,24 @@ Os testes serão realizados de forma remota, com moderação e gravação via pl
 | Número | Descrição da Tarefa                                                                                                    | RF Relacionado |
 |--------|----------------------------------------------------------------------------------------------------------------------  |----------------|
 | 01     | Cadastrar-se como nutricionista no sistema, criando um perfil com suas informações pessoais gerais e de formação.      | RF-001         |
-| 02     | Realizar login utilizando o e-mail e senha cadastrados.                                                                | RF-004         |
-| 03     | Recuperar a senha através do e-mail registrado, em caso de esquecimento.                                               | RF-005         |
-| 03     | Cadastrar um paciente com seus dados pessoais, incluindo IMC, altura, idade, objetivos de saúde, etc.                  | RF-003         |
-| 04     | Utilizar as funcionalidades de CRUD para editar as informações de um paciente cadastrado.                              | RF-002         |
-| 05     | Cadastrar um plano alimentar para o paciente e gerenciá-lo usando as funcionalidades de CRUD.                          | RF-006         |
-| 06     | Modificar o plano alimentar de um paciente, adicionando ou alterando receitas e valor nutricional.                     | RF-006         |
-| 07     | Propor dicas de receitas e utilizar as funcionalidades de CRUD para o gerenciamento das mesmas.                        | RF-009         |
-| 08     | Calcular o índice de massa corpórea (IMC) de um paciente.                                                              | RF-012         |
-| 09     | Alterar os dados do seu perfil como nutricionista, conforme necessário.                                                | RF-013         |
+| 02     | Realizar login utilizando o CPF e senha cadastrados.                                                                   | RF-004         |
+| 03     | Cadastrar um paciente com seus dados pessoais, altura, idade, objetivos de saúde, etc.                                 | RF-003         |
+| 04     | Utilizar as funcionalidades de CRUD para editar as informações de um paciente cadastrado.                              | RF-003         |
+| 05     | Cadastrar um plano alimentar para o paciente e gerenciá-lo usando as funcionalidades de CRUD.                          | RF-005         |
+| 06     | Modificar o plano alimentar de um paciente, adicionando ou alterando receitas e valor nutricional.                     | RF-005         |
+| 07     | Propor dicas de receitas e utilizar as funcionalidades de CRUD para o gerenciamento das mesmas.                        | RF-007         |
+| 09     | Alterar os dados do seu perfil como nutricionista, conforme necessário.                                                | RF-009         |
 
 ## Tarefas para Pacientes
 
 | Número | Descrição da Tarefa                                                                                                    | RF Relacionado |
 |--------|----------------------------------------------------------------------------------------------------------------------- |----------------|
 | 01     | Cadastrar-se como paciente no sistema, incluindo dados pessoais, objetivos e informações de saúde.                     | RF-003         |
-| 02     | Realizar login utilizando o e-mail e senha cadastrados.                                                                | RF-004         |
-| 03     | Recuperar a senha através do e-mail registrado, em caso de esquecimento.                                               | RF-005         |
-| 04     | Visualizar o plano alimentar criado pelo nutricionista e fazer comentários sobre o mesmo.                              | RF-007         |
-| 05     | Registrar o diário alimentar com informações detalhadas sobre refeições, calorias ingeridas, e ingredientes consumidos.| RF-008         |
-| 06     | Avaliar as receitas propostas por nutricionistas ou outros pacientes, dando likes ou joinhas.                          | RF-011         |
-| 07     | Verificar o histórico de peso e acompanhar a perda de peso registrada ao longo do tempo.                               | RF-010         |
-| 08     | Calcular o índice de massa corpórea (IMC) de um paciente.                                                              | RF-012         |
-| 08     | Alterar seus dados pessoais cadastrados no perfil.                                                                     | RF-013         |
+| 02     | Realizar login utilizando o CPF e senha cadastrados.                                                                   | RF-004         |
+| 03     | Visualizar o plano alimentar criado pelo nutricionista.                                                                | RF-005         |
+| 04     | Registrar o diário alimentar com informações detalhadas sobre refeições, calorias ingeridas, e ingredientes consumidos.| RF-006         |
+| 05     | Avaliar as receitas propostas por nutricionistas ou outros pacientes, dando likes ou joinhas.                          | RF-008         |
+| 06     | Alterar seus dados pessoais cadastrados no perfil.                                                                     | RF-009         |
 
 ## Métricas de Avaliação
 
