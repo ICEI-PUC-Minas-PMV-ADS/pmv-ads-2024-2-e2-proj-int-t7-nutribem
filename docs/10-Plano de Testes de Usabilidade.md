@@ -26,24 +26,22 @@ Os testes serão realizados de forma remota, com moderação e gravação via pl
 | Número | Descrição da Tarefa                                                                                                    | RF Relacionado |
 |--------|----------------------------------------------------------------------------------------------------------------------  |----------------|
 | 01     | Cadastrar-se como nutricionista no sistema, criando um perfil com suas informações pessoais gerais e de formação.      | RF-001         |
-| 02     | Realizar login utilizando o CPF e senha cadastrados.                                                                   | RF-004         |
-| 03     | Cadastrar um paciente com seus dados pessoais, altura, idade, objetivos de saúde, etc.                                 | RF-003         |
-| 04     | Utilizar as funcionalidades de CRUD para editar as informações de um paciente cadastrado.                              | RF-003         |
-| 05     | Cadastrar um plano alimentar para o paciente e gerenciá-lo usando as funcionalidades de CRUD.                          | RF-005         |
-| 06     | Modificar o plano alimentar de um paciente, adicionando ou alterando receitas e valor nutricional.                     | RF-005         |
-| 07     | Propor dicas de receitas e utilizar as funcionalidades de CRUD para o gerenciamento das mesmas.                        | RF-007         |
-| 09     | Alterar os dados do seu perfil como nutricionista, conforme necessário.                                                | RF-009         |
+| 02     | Realizar login utilizando o CPF e senha cadastrados.                                                                   | RF-003         |
+| 03     | Cadastrar um plano alimentar para o paciente e gerenciá-lo usando as funcionalidades de CRUD.                          | RF-004         |
+| 04     | Modificar o plano alimentar de um paciente, adicionando ou alterando receitas e valor nutricional.                     | RF-004         |
+| 05     | Propor dicas de receitas e utilizar as funcionalidades de CRUD para o gerenciamento das mesmas.                        | RF-006         |
+| 06     | Alterar os dados do seu perfil como nutricionista, conforme necessário.                                                | RF-008         |
 
 ## Tarefas para Pacientes
 
 | Número | Descrição da Tarefa                                                                                                    | RF Relacionado |
 |--------|----------------------------------------------------------------------------------------------------------------------- |----------------|
-| 01     | Cadastrar-se como paciente no sistema, incluindo dados pessoais, objetivos e informações de saúde.                     | RF-003         |
-| 02     | Realizar login utilizando o CPF e senha cadastrados.                                                                   | RF-004         |
-| 03     | Visualizar o plano alimentar criado pelo nutricionista.                                                                | RF-005         |
-| 04     | Registrar o diário alimentar com informações detalhadas sobre refeições, calorias ingeridas, e ingredientes consumidos.| RF-006         |
-| 05     | Avaliar as receitas propostas por nutricionistas ou outros pacientes, dando likes ou joinhas.                          | RF-008         |
-| 06     | Alterar seus dados pessoais cadastrados no perfil.                                                                     | RF-009         |
+| 01     | Cadastrar-se como paciente no sistema, incluindo dados pessoais, objetivos e informações de saúde.                     | RF-002         |
+| 02     | Realizar login utilizando o CPF e senha cadastrados.                                                                   | RF-003         |
+| 03     | Visualizar o plano alimentar criado pelo nutricionista.                                                                | RF-004         |
+| 04     | Registrar o diário alimentar com informações detalhadas sobre refeições, calorias ingeridas, e ingredientes consumidos.| RF-005         |
+| 05     | Avaliar as receitas propostas por nutricionistas ou outros pacientes, dando likes ou joinhas.                          | RF-007         |
+| 06     | Alterar seus dados pessoais cadastrados no perfil.                                                                     | RF-008         |
 
 ## Métricas de Avaliação
 
