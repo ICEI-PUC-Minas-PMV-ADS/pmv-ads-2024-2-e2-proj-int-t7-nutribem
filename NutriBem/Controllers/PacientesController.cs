@@ -120,7 +120,7 @@ namespace NutriBem.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return Redirect("/");
             }
             return View(paciente);
         }
@@ -247,10 +247,7 @@ namespace NutriBem.Controllers
             var paciente = await _context.Pacientes
                 .Where(c => c.Cpf == id)
                 .ToListAsync();
-            var meuNutricionista = await _context.Nutricionistas
-                .Where(c => c.Cpf == paciente[0].CpfNutricionista)
-                .ToListAsync();
-;
+            var meuNutricionista = _context.Nutricionistas.FirstOrDefault(x => x.Cpf == paciente[0].CpfNutricionista);;
             ViewBag.MeuPerfil = meuNutricionista;
 
 

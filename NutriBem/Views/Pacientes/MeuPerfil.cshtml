@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Meus pacientes";
+
 }
 
 <h1 class="mb-4 pt-4 ps-5">Meu perfil</h1>
@@ -27,7 +28,7 @@
                             <td>@Html.DisplayFor(modelItem => item.Email)</td>
                             <td>@Html.DisplayFor(modelItem => item.DataNascimento)</td>
                             <td>@Html.DisplayFor(modelItem => item.Telefone)</td>
-                            <td>@ViewBag.MeuPerfil[0].Nome</td>
+                            <td>@ViewBag.MeuPerfil.Nome</td>
                         </tr>
                         <a asp-action="Edit" asp-route-id=@item.Cpf>Editar meu perfil</a>
                     }

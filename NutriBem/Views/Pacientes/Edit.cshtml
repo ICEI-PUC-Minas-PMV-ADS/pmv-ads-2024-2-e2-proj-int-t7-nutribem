@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Edit";
 }
+@using System.Security.Claims;
 
 <h1 class="mb-4 pt-4 ps-5">Editar Paciente</h1>
 
@@ -74,7 +75,7 @@
                 </div>
 
                 <div class="form-group d-flex justify-content-between mt-4">
-                    <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;" asp-action="Index">Voltar</a>
+                    <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;" asp-action="MeuPerfil" asp-route-id=@User.FindFirst(ClaimTypes.NameIdentifier).Value>Voltar</a>
                     <input type="submit" value="Salvar" class="btn" style="background-color: #95B963; border-color: #95B963; color: black; font-weight: bold;" />
                 </div>
             </form>
