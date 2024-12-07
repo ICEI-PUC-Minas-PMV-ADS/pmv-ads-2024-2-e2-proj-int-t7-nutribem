@@ -12,66 +12,58 @@ Este Plano de Testes de Software tem como objetivo documentar e orientar a execu
 https://github.com/user-attachments/assets/caf7aeab-0ea5-4e34-9f4e-47d65908768d
 <Hr>
 
-| **Caso de Teste** 	| **CT-02 – Nutricionista cadastra/edita/exclui paciente** 	|
+| **Caso de Teste** 	| **CT-02 – Cadastrar paciente** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-002 - Nutricionista cadastra um paciente e utiliza CRUD's para o seu gerenciamento. |
-|Registro de evidência | Vídeo abaixo. |
-
-https://github.com/user-attachments/assets/10e2d90a-006f-4773-b661-7de18274f8b4
-<Hr>
-
-| **Caso de Teste** 	| **CT-03 – Cadastrar paciente** 	|
-|:---:	|:---:	|
-|	Requisito Associado 	| RF-003 - Cadastrar um paciente como usuário, com informações pessoais em geral, objetivos e dados ligados a sua saúde (IMC, altura, idade, etc.). |
+|	Requisito Associado 	| RF-002 - Cadastrar um paciente como usuário, com informações pessoais em geral, objetivos e dados ligados a sua saúde (IMC, altura, idade, etc.). |
 |Registro de evidência | Vídeo abaixo. |
 
 https://github.com/user-attachments/assets/91b6f714-731d-4bb3-b5ee-c86bf281feb2
 <Hr>
 
-| **Caso de Teste** 	| **CT-04 – Testar login com CPF e senha.** 	|
+| **Caso de Teste** 	| **CT-03 – Testar login com CPF e senha.** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-004 - Realizar login utilizando CPF e senha. |
+|	Requisito Associado 	| RF-003 - Realizar login utilizando CPF e senha. |
 |Registro de evidência | Vídeo abaixo. |
 
 https://github.com/user-attachments/assets/14b80917-2798-432f-ba99-ec0f87821607
 <Hr>
 
-| **Caso de Teste** 	| **CT-05 – Cadastrar/editar/excluir plano alimentar** 	|
+| **Caso de Teste** 	| **CT-04 – Cadastrar/editar/excluir plano alimentar** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-005 - Cadastrar um plano alimentar pelo nutricionista e utiliza CRUD's para o seu gerenciamento. |
+|	Requisito Associado 	| RF-004 - Cadastrar um plano alimentar pelo nutricionista e utiliza CRUD's para o seu gerenciamento. |
 |Registro de evidência | Vídeo abaixo. |
 
 https://github.com/user-attachments/assets/3d439b93-9f0d-402c-bc43-bbc774533547
 <Hr>
 
-| **Caso de Teste** 	| **CT-06 – Registrar diário alimentar** 	|
+| **Caso de Teste** 	| **CT-05 – Registrar diário alimentar** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-006 - O paciente Registra o diário alimentar com informações sobre horário das refeições, calorias ingeridas, ingredientes consumidos, etc por meio de um campo Editável. |
+|	Requisito Associado 	| RF-005 - O paciente Registra o diário alimentar com informações sobre horário das refeições, calorias ingeridas, ingredientes consumidos, etc por meio de um campo Editável. |
 |Registro de evidência | Vídeo abaixo. |
 
 https://github.com/user-attachments/assets/72bdcf40-af59-484e-bebc-2f26fbf68647
 <Hr>
 
-| **Caso de Teste** 	| *CT-07 – Propor/editar/excluir dicas de receitas** 	|
+| **Caso de Teste** 	| *CT-06 – Propor/editar/excluir dicas de receitas** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-007 - Propor dicas de receitas por nutricionistas e pacientes e utiliza CRUD's para o seu gerenciamento. |
+|	Requisito Associado 	| RF-006 - Propor dicas de receitas por nutricionistas e pacientes e utiliza CRUD's para o seu gerenciamento. |
 |Registro de evidência | Vídeo abaixo. |
 
 https://github.com/user-attachments/assets/a3aa3932-f607-4931-b1b3-58e7516b30a5
 
 <Hr>
 
-| **Caso de Teste** 	| **CT-08 – Avaliar as receitas** 	|
+| **Caso de Teste** 	| **CT-07 – Avaliar as receitas** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-008 - Avaliar as receitas propostas (like ou joinha). |
+|	Requisito Associado 	| RF-007 - Avaliar as receitas propostas (like ou joinha). |
 |Registro de evidência | Vídeo abaixo. |
 
 https://github.com/user-attachments/assets/daf6668a-900e-4e9b-9660-26a5da073536
 <Hr>
 
-| **Caso de Teste** 	| **CT-09 – Testar alteração de dados de cadastro** 	|
+| **Caso de Teste** 	| **CT-08 – Testar alteração de dados de cadastro** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-009 - Permitir que tanto o paciente quanto o nutricionista alterem seus dados de cadastro. |
+|	Requisito Associado 	| RF-008 - Permitir que tanto o paciente quanto o nutricionista alterem seus dados de cadastro. |
 |Registro de evidência | Vídeo abaixo. |
 
 https://github.com/user-attachments/assets/744d4296-7e24-4c0c-a3c2-12b67a98a4ca
