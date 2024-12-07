@@ -10,11 +10,11 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ## Modelo ER (Projeto Conceitual)
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/blob/44153ab46b8d0795e4e5de24e50abf82b6ac01e5/docs/img/modeloEntidadeRelacionamento.jpg" >
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/blob/44153ab46b8d0795e4e5de24e50abf82b6ac01e5/docs/img/modeloEntidadeRelacionamento.png" >
 
 ## Projeto da Base de Dados
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/blob/f59e253088cd42552149a6abbe5bd87676792b9a/docs/img/diagramaEntidadeRelacionamento.jpeg">
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e2-proj-int-t7-nutribem/blob/f59e253088cd42552149a6abbe5bd87676792b9a/docs/img/diagramaEntidadeRelacionamento.png">
 
 ## Tecnologias Utilizadas
 
