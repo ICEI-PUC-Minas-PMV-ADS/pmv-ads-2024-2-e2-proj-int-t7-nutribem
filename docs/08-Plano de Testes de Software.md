@@ -56,46 +56,11 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 <table>
     <tr>
         <th><strong>Caso de Teste</strong></th>
-        <th><strong>CT-02 – Nutricionista cadastra/edita/exclui paciente</strong></th>
+        <th><strong>CT-02 – Cadastrar paciente</strong></th>
     </tr>
     <tr>
         <td><strong>Requisito Associado</strong></td>
-        <td>RF-002 - Nutricionista cadastra um paciente e utiliza CRUD's para o seu gerenciamento.</td>
-    </tr>
-    <tr>
-        <td><strong>Objetivo do Teste</strong></td>
-        <td>Verificar se o nutricionista consegue criar, editar e excluir o perfil de paciente.</td>
-    </tr>
-    <tr>
-        <td><strong>Passos</strong></td>
-        <td>
-            - Acessar o menu "Pacientes". <br>
-            - Clicar em "Cadastrar novo Paciente". <br>         
-            - Preencher informações.<br>
-            - Clicar em "Enviar convite".<br>
-            - Clicar na ferramenta de edição do paciente.<br>
-            - Alterar dados.<br>
-            - Clicar em "Confirmar".<br>
-            - Clicar na ferramenta de exclusão do perfil de paciente.<br>
-            - Clicar em "Confirmar".
-        </td>
-    </tr>
-    <tr>
-        <td><strong>Critério de Êxito</strong></td>
-        <td>Perfil do paciente deve ser exibido na lista, as alterações devem ser salvas com êxito e perfil deve ser excluído da lista.</td>
-    </tr>
-</table>
-
-<br>
-
-<table>
-    <tr>
-        <th><strong>Caso de Teste</strong></th>
-        <th><strong>CT-03 – Cadastrar paciente</strong></th>
-    </tr>
-    <tr>
-        <td><strong>Requisito Associado</strong></td>
-        <td>RF-003 - Cadastrar um paciente como usuário, com informações pessoais em geral, objetivos e dados ligados a sua saúde (IMC, altura, idade, etc.).</td>
+        <td>RF-002 - Cadastrar um paciente como usuário, com informações pessoais em geral, objetivos e dados ligados a sua saúde (IMC, altura, idade, etc.).</td>
     </tr>
     <tr>
         <td><strong>Objetivo do Teste</strong></td>
@@ -125,11 +90,11 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 <table>
     <tr>
         <th><strong>Caso de Teste</strong></th>
-        <th><strong>CT-04 – Testar login com CPF e senha.</strong></th>
+        <th><strong>CT-03 – Testar login com CPF e senha.</strong></th>
     </tr>
     <tr>
         <td><strong>Requisito Associado</strong></td>
-        <td>RF-004 - Realizar login utilizando CPF e senha.</td>
+        <td>RF-003 - Realizar login utilizando CPF e senha.</td>
     </tr>
     <tr>
         <td><strong>Objetivo do Teste</strong></td>
@@ -155,11 +120,11 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 <table>
     <tr>
         <th><strong>Caso de Teste</strong></th>
-        <th><strong>CT-05 – Cadastrar/editar/excluir plano alimentar</strong></th>
+        <th><strong>CT-04 – Cadastrar/editar/excluir plano alimentar</strong></th>
     </tr>
     <tr>
         <td><strong>Requisito Associado</strong></td>
-        <td>RF-005 - Cadastrar um plano alimentar pelo nutricionista e utiliza CRUD's para o seu gerenciamento.</td>
+        <td>RF-004 - Cadastrar um plano alimentar pelo nutricionista e utiliza CRUD's para o seu gerenciamento.</td>
     </tr>
     <tr>
         <td><strong>Objetivo do Teste</strong></td>
@@ -190,11 +155,11 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 <table>
     <tr>
         <th><strong>Caso de Teste</strong></th>
-        <th><strong>CT-06 – Registrar diário alimentar</strong></th>
+        <th><strong>CT-05 – Registrar diário alimentar</strong></th>
     </tr>
     <tr>
         <td><strong>Requisito Associado</strong></td>
-        <td>RF-006 - O paciente Registra o diário alimentar com informações sobre horário das refeições, calorias ingeridas, ingredientes consumidos, etc por meio de um campo Editável.</td>
+        <td>RF-005 - O paciente Registra o diário alimentar com informações sobre horário das refeições, calorias ingeridas, ingredientes consumidos, etc por meio de um campo Editável.</td>
     </tr>
     <tr>
         <td><strong>Objetivo do Teste</strong></td>
@@ -219,11 +184,11 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 <table>
     <tr>
         <th><strong>Caso de Teste</strong></th>
-        <th><strong>CT-07 – Propor/editar/excluir dicas de receitas</strong></th>
+        <th><strong>CT-06 – Propor/editar/excluir dicas de receitas</strong></th>
     </tr>
     <tr>
         <td><strong>Requisito Associado</strong></td>
-        <td>RF-007 - Propor dicas de receitas por nutricionistas e pacientes e utiliza CRUD's para o seu gerenciamento.</td>
+        <td>RF-006 - Propor dicas de receitas por nutricionistas e pacientes e utiliza CRUD's para o seu gerenciamento.</td>
     </tr>
     <tr>
         <td><strong>Objetivo do Teste</strong></td>
@@ -254,11 +219,11 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 <table>
     <tr>
         <th><strong>Caso de Teste</strong></th>
-        <th><strong>CT-08 – Avaliar as receitas</strong></th>
+        <th><strong>CT-07 – Avaliar as receitas</strong></th>
     </tr>
     <tr>
         <td><strong>Requisito Associado</strong></td>
-        <td>RF-008 - Avaliar as receitas propostas (like ou joinha).</td>
+        <td>RF-007 - Avaliar as receitas propostas (like ou joinha).</td>
     </tr>
     <tr>
         <td><strong>Objetivo do Teste</strong></td>
@@ -283,11 +248,11 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 <table>
     <tr>
         <th><strong>Caso de Teste</strong></th>
-        <th><strong>CT-09 – Testar alteração de dados de cadastro</strong></th>
+        <th><strong>CT-08 – Testar alteração de dados de cadastro</strong></th>
     </tr>
     <tr>
         <td><strong>Requisito Associado</strong></td>
-        <td>RF-009 - Permitir que tanto o paciente quanto o nutricionista alterem seus dados de cadastro.</td>
+        <td>RF-008 - Permitir que tanto o paciente quanto o nutricionista alterem seus dados de cadastro.</td>
     </tr>
     <tr>
         <td><strong>Objetivo do Teste</strong></td>
