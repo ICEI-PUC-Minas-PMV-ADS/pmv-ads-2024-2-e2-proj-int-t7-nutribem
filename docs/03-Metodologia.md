@@ -33,7 +33,7 @@ etiquetas:
 A equipe utiliza metodologias ágeis, escolhendo o Scrum como base para o processo de desenvolvimento. A equipe está organizada da seguinte maneira:
 -	Scrum Master: Ana Clara Dunningham Matos Seixas
 -	Product Owner: Joel Onofre de São José Júnior 
--	Equipe de Desenvolvimento: Cristhiane Maria Assi, Guilherme Henrique Salviano, Karina Reis, Victor Emanuel de Souza
+-	Equipe de Desenvolvimento: Guilherme Henrique Salviano, Karina Reis, Victor Emanuel de Souza
 
 
 ### Processo
