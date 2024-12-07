@@ -34,8 +34,7 @@
 
                 <div class="form-group mb-3">
                     <label asp-for="CpfNutricionista" class="control-label fw-bold"></label>
-                    <input asp-for="CpfNutricionista" class="form-control" style="border-color: #95B963;" placeholder="Ex.: 123.456.789-00" />
-                    <span asp-validation-for="CpfNutricionista" class="text-danger"></span>
+                    <select asp-for="CpfNutricionista" class="form-control" style="border-color: #95B963;" asp-items="ViewBag.CpfNutricionista"></select>
                 </div>
 
                 <div class="form-group mb-3">

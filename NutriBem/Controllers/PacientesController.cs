@@ -84,6 +84,7 @@ namespace NutriBem.Controllers
             {
                 return NotFound();
             }
+            ViewData["CpfNutricionista"] = new SelectList(_context.Nutricionistas, "Cpf", "Nome", paciente.CpfNutricionista);
             return View(paciente);
         }
 
@@ -246,8 +247,11 @@ namespace NutriBem.Controllers
             var paciente = await _context.Pacientes
                 .Where(c => c.Cpf == id)
                 .ToListAsync();
-
-            ViewBag.MeuPerfil = paciente;
+            var meuNutricionista = await _context.Nutricionistas
+                .Where(c => c.Cpf == paciente[0].CpfNutricionista)
+                .ToListAsync();
+;
+            ViewBag.MeuPerfil = meuNutricionista;
 
 
             return View(paciente);
