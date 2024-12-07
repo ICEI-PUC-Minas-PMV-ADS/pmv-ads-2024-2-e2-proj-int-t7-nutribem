@@ -67,6 +67,7 @@ namespace NutriBem.Controllers
             return View(planoAlimentar);
         }
 
+        [Authorize(Roles = "nutricionista")]
         // GET: PlanosAlimentares/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -90,6 +91,7 @@ namespace NutriBem.Controllers
         // POST: PlanosAlimentares/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "nutricionista")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Nomepaciente,Objetivo,Descricao,Observacao")] PlanoAlimentar planoAlimentar)
@@ -122,6 +124,7 @@ namespace NutriBem.Controllers
             return View(planoAlimentar);
         }
 
+        [Authorize(Roles = "nutricionista")]
         // GET: PlanosAlimentares/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -139,7 +142,7 @@ namespace NutriBem.Controllers
 
             return View(planoAlimentar);
         }
-
+        [Authorize(Roles = "nutricionista")]
         // POST: PlanosAlimentares/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -169,7 +172,7 @@ namespace NutriBem.Controllers
 
             return PartialView("_PartialListRefeicoes", refeicoes);
         }
-
+        [Authorize(Roles = "nutricionista")]
         public async Task<IActionResult> CreateRefeicaoPartial(int planoAlimentarId)
         {
             // Log para ver se a ação é chamada corretamente

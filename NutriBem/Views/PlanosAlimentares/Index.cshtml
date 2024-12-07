@@ -31,11 +31,22 @@
                             <p><strong>Objetivo:</strong> @item.Objetivo</p>
                             <p><strong>Descrição:</strong> @item.Descricao</p>
                             <p><strong>Observação:</strong> @item.Observacao</p>
-                            <div class="d-flex justify-content-start">
-                                <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; margin-right: 10px; font-weight: bold;" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
-                                <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; margin-right: 10px; font-weight: bold;" asp-action="Details" asp-route-id="@item.Id">Visualizar</a>
-                                <a class="btn btn-danger" style="color: black; margin-right: 10px; font-weight: bold;" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
-                            </div>
+                            @{
+                                if (User.IsInRole("nutricionista"))
+                                {
+                                    <div class="d-flex justify-content-start">
+                                        <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; margin-right: 10px; font-weight: bold;" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                                        <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; margin-right: 10px; font-weight: bold;" asp-action="Details" asp-route-id="@item.Id">Visualizar</a>
+                                        <a class="btn btn-danger" style="color: black; margin-right: 10px; font-weight: bold;" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                                    </div>
+                                }
+                                else
+                                {
+                                   <div class="d-flex justify-content-start">
+                                        <a class="btn" style="background-color: #95B963; border-color: #95B963; color: black; margin-right: 10px; font-weight: bold;" asp-action="Details" asp-route-id="@item.Id">Visualizar</a>
+                                    </div> 
+                                }
+                            }
                         </div>
                     </div>
                 </div>

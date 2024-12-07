@@ -30,18 +30,22 @@
                                 <li><strong>Calorias:</strong> @refeicao.Receita.Calorias</li>
                                 <li><strong>Curtidas:</strong> @refeicao.Receita.Curtidas</li>
                             </ul>
-                            <div class="d-flex gap-2">
-                                <form asp-action="Delete">
-                                    <input type="hidden" asp-for="@refeicao.Id" />
-                                    <button class="deleteRefeicaoBtn" data-id="@refeicao.Id">
-                                        <span class="bi bi-trash"></span>
-                                    </button>
-                                </form>
-                                <button class="editRefeicaoBtn" data-id="@refeicao.Id" data-bs-toggle="modal" data-bs-target="#editarRefeicaoModal">
-                                    <span class="bi bi-pencil-square"></span>
-                                </button>
-                            </div>
-
+                            @{
+                                if (User.IsInRole("nutricionista"))
+                                {
+                                    <div class="d-flex gap-2">
+                                        <form asp-action="Delete">
+                                            <input type="hidden" asp-for="@refeicao.Id" />
+                                            <button class="deleteRefeicaoBtn" data-id="@refeicao.Id">
+                                                <span class="bi bi-trash"></span>
+                                            </button>
+                                        </form>
+                                        <button class="editRefeicaoBtn" data-id="@refeicao.Id" data-bs-toggle="modal" data-bs-target="#editarRefeicaoModal">
+                                            <span class="bi bi-pencil-square"></span>
+                                        </button>
+                                    </div>
+                                }
+                            }
                         </div>
                     </div>
                 </div>
