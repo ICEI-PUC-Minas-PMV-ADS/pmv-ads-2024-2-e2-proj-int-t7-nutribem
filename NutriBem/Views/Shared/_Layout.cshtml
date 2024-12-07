@@ -74,9 +74,14 @@
                                 <a class="nav-link text-dark" asp-controller="Nutricionistas" asp-action="MeuPerfil" asp-route-id=@User.FindFirst(ClaimTypes.NameIdentifier).Value>Meu Perfil</a>
                             </li>
                         }
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Nutricionistas" asp-action="Index">Nutricionistas</a>
-                        </li>
+                        @{
+                            if (User.IsInRole("nutricionista"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Nutricionistas" asp-action="Index">Nutricionistas</a>
+                                </li>
+                            }
+                        }
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Comentarios" asp-action="Index">Diário Alimentar</a>
                         </li>

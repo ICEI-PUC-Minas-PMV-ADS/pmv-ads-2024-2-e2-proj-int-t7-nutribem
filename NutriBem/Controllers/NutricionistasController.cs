@@ -22,7 +22,7 @@ namespace NutriBem.Controllers
         }
 
         // GET: Nutricionistas
-        [Authorize]
+        [Authorize(Roles = "nutricionista")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Nutricionistas.ToListAsync());
@@ -238,7 +238,7 @@ namespace NutriBem.Controllers
             return View();
         }
 
-        [Authorize]
+        [Authorize(Roles = "nutricionista")]
         public async Task<IActionResult> MeusPacientes(string id)
         {
             if (id == null) return NotFound();
