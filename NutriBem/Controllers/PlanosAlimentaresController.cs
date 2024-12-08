@@ -206,6 +206,17 @@ namespace NutriBem.Controllers
             return PartialView("_PartialEditRefeicoes", refeicao);
         }
 
+        public async Task<IActionResult> RefeicoesDetails(int id)
+        {
+            var refeicoes = await _context.Refeicoes
+                .Include(r => r.Receita)
+                .Where(r => r.PlanoAlimentarId == id)
+                .ToListAsync();
+
+            return PartialView("_PartialListRefeicoesDetails", refeicoes);
+        }
+
+
 
 
     }

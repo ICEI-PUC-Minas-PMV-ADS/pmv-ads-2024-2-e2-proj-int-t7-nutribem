@@ -43,7 +43,7 @@
         </dl>
     </div>
     <div class="ms-5" id="partialZone">
-        @await Html.PartialAsync("_PartialListRefeicoes", Model.Refeicoes)
+        @await Html.PartialAsync("_PartialListRefeicoesDetails", Model.Refeicoes)
     </div>
     <div>
         <a asp-action="Index" class="btn btn-danger">Voltar </a>
@@ -57,7 +57,7 @@
     <script>
             // Carregar as refeições na zona de partial
             function loadRefeicoes() {
-                $('#partialZone').load('@Url.Action("RefeicoesPartial", "PlanosAlimentares", new { id = Model.Id })');
+                $('#partialZone').load('@Url.Action("RefeicoesDetails", "PlanosAlimentares", new { id = Model.Id })');
         }
         // Carregar as refeições na inicialização
         $(document).ready(function () {
